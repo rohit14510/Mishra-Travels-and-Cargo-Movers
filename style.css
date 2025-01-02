@@ -1,0 +1,544 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:10px 8px;
+    background-color: white;
+    color: black;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .5s all;
+}
+.nav-links ul li a:hover{
+    color: red;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .nav-links ul {
+        display: block;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+        text-align: end;
+        color: black;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links ul li a{
+      color: black;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-links ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-links ul li {
+        margin: 0 45px;
+    }
+}
+/* ----------------------------------------------end   Header---------------------------------------------------------- */
+/* ------------------------------------------------Start Hero Section------------------------------------------------------- */
+.Hero_section{
+    background-image: url('assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.Hero_section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #FF512F; 
+  background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
+  background: linear-gradient(to left, #DD2476, #FF512F); 
+  opacity: 0.8;
+}
+
+.Hero_section .row {
+  position: relative;
+  z-index: 2; 
+}
+.hero_tittle{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.hero_para{
+    font-size: 1.5rem;
+}
+.common_btn{
+    background-color: #FFAE02;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: large;
+}
+.hero_img{
+    width: auto;
+    height: 80vh;
+    
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero_tittle{
+        font-size: 2rem;
+        font-weight: 700;
+      
+    }
+    .hero_para{
+        font-size: 1rem;
+    
+    }
+    .hero_img{
+        width: auto;
+        height: 40vh;
+        
+    }
+ 
+}
+/* ------------------------------------------------End Hero Section------------------------------------------------------- */
+/* ---------------------------------------------------Start online Booking------------------------------------------------- */
+.Contact_icon{
+    background-color: #FFAE02;
+    padding: 8px;
+}
+.Contact_section{
+  background: #FF512F; 
+  background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
+  background: linear-gradient(to left, #DD2476, #FF512F); 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.booking-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  
+  }
+  .booking-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .btn-book {
+    background-color: #D72024;
+    border: 2px solid #D72024;
+    color: #fff;
+    font-weight: bold;
+    transition: .5s;
+  }
+  .btn-book:hover {
+    background-color: #fff;
+    color: #000;
+   border: 2px solid #D72024;
+  }
+  .form-select, .form-control {
+    border-color: #ddd;
+  }
+  .form-select:focus, .form-control:focus {
+    border-color: #ffc107;
+    box-shadow: none;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  /* ----------------------about ------------------------------------ */
+  .counter_text{
+    font-size: 3rem;
+    color: #D72024;
+  }
+/* -----------------------------------------------------------------Start Project-------------------------------------- */
+.Project_Section {
+    background-image: url('assets/perimum.jpg'); /* Replace with your background image path */
+    background-attachment: fixed; /* Makes the background fixed */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding:80px 50px; /* Adds spacing above and below the content */
+    position: relative;
+  }
+  .Project_Section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #FF512F; 
+  background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
+  background: linear-gradient(to left, #DD2476, #FF512F); 
+  opacity: 0.8;
+  }
+  .Project_Section .row {
+    z-index: 3;
+    position: relative;
+  }
+  @media (max-width: 768px) {
+    .Project_Section{
+      padding: 30px;
+    }
+  }
+
+  .ProjecrCard{
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20PX;
+  }
+  /* ------------------------------------------Service--------------------------------------------------- */
+  .Learn_More{
+    text-decoration: none;
+    color: #D72024;
+  }
+  .service_card{
+    background-color: #F4F4F4;
+    padding: 20px;
+    border: 15px solid white;
+   box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.15) ;
+  }
+
+  /* -----------------------------------------------Bus Choose------------------------------------------------- */
+  .Bus_Choose_card{
+    box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.15) ;
+  }
+  /* -----------------------------------------------------Choose Us------------------------------------------------ */
+
+  .Choose_Us_Section {
+    background-image: url('assets/choose_us.jpg'); /* Replace with your background image path */
+    background-attachment: fixed; /* Makes the background fixed */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding:80px 50px; /* Adds spacing above and below the content */
+    position: relative;
+  }
+  .Choose_Us_Section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #FF512F; 
+    background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
+    background: linear-gradient(to left, #DD2476, #FF512F); 
+    opacity: 0.8;
+  }
+  .Choose_Us_Section .row {
+    z-index: 3;
+    position: relative;
+  }
+  /* ----------------------------------------------How it Works------------------------------------------------------ */
+  .Start_Card{
+    padding: 20px;
+    box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.15) ;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+
+
+.Start_Card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+  .First_Start_Card{
+    background: #FF512F; 
+    background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
+    background: linear-gradient(to left, #DD2476, #FF512F); 
+  }
+
+  /* -------------------------------------------------Testimonials-------------------------------------------------------- */
+  .testimonials-section {
+    background-image: url("assets/Project_bg.png");
+    background-size: cover;
+  }
+  .testimonials-section .left-image {
+    position: relative;
+  }
+  .testimonials-section .left-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .testimonials-section .left-image .quote-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ffc107;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+  }
+  .testimonials-section .testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .testimonials-section .testimonial-card .profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  .testimonials-section .testimonial-card .profile-info {
+    margin-left: 15px;
+  }
+  
+.splide__slide {
+  position: relative;
+
+}
+.splide__arrow--prev {
+  left: 0em;
+}
+.splide__arrow--next {
+  right: 0em;
+}
+.Have_Ques{
+  background-image: url('assets/Project_bg.png');
+  background-size: cover;
+
+}
+/* ------------------------------------------------------FAQ---------------------------------------------------- */
+.accordion-header .accordion-button {
+  font-size: 1.15rem; /* Increase font size */
+  font-weight: 700; /* Make it bold */
+  text-transform: uppercase;
+}
+
+.accordion-item {
+  border: 1px solid #ddd !important; /* Add a light border */
+  border-radius: 5px; /* Add rounded corners */
+  margin-bottom: 10px; /* Add spacing between accordion items */
+}
+
+.accordion-item:last-child {
+  margin-bottom: 0; /* Remove margin for the last item */
+}
+.accordion-button:not(.collapsed) {
+  background-color: white; /* Active background color */
+  color: #e71b00; /* Active text color */
+}
+.accordion-button:focus {
+  box-shadow: none !important; /* Remove focus outline */
+  border-color: red !important; /* Focus border color */
+}
+
+/* ------------------------------------Footer-------------------------------------------- */
+
+.pointer{
+  cursor: pointer;
+}
+.Footer_link li a{
+  text-decoration: none;
+  color: #b2acac;
+}
+/* -----------------------------------About Page--------------------------------------------- */
+.hero-section_about {
+  position: relative;
+  background: url('assets/about_hero.jpg') center/cover no-repeat;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* Desktop Styles */
+@media (max-width: 769px) {
+  .hero-section_about {
+    width: 100%;
+    height: 30vh !important;
+    padding: 20px;
+  }
+}
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FF512F; 
+  background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
+  background: linear-gradient(to left, #DD2476, #FF512F); 
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------contact----------------------------------------------- */
+
+.contact_icon{
+  transition: .5s;
+}
+.contact_icon:hover{
+  transform: translateY(-10px);
+}
+.form_btn{
+  padding: 10px 20px;
+  background-color: #D72024;
+  border: none;
+  color: #fff;
+font-weight: 700;
+
+}
+.form-control{
+  background-color: #F4F4F4;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form-container {
+  text-align: center;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.form-header label {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#login:checked ~ .form-body #loginForm {
+  display: block;
+}
+
+#signup:checked ~ .form-body #signupForm {
+  display: block;
+}
+
+#loginForm, #signupForm {
+  display: none;
+  flex-direction: column;
+}
+
+.modal_input, .modalbtn{
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modalbtn {
+  background: #D72024;
+  border: 1px solid #D72024;
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.modalbtn:hover {
+ border: 2px solid #D72024;
+ background-color: white;
+ color: #000;
+}

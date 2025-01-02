@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mishra Travel and Cargo Movers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+</head>
+
+<body>
+    <!-- --------------------------------------------Header----------------------------------------------------- -->
+    <header class="sticky-top shadow">
+        <div class="logo">
+            <a href="index.html"> <img src="assets/logo.png" width="15%" alt=""></a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li class="bg-danger px-3 py-2 text-white"><a class="text-white" href="#loginModal" id="login-btn">Login</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <span>&#9776;</span>
+        </div>
+    </header>
+    
+<!-- Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="form-container">
+            <input class="modal_input" type="radio" name="formToggle" id="login" checked>
+            <input class="modal_input" type="radio" name="formToggle" id="signup">
+            <div class="form-header">
+                <label for="login">Login</label>
+                <label for="signup">Sign Up</label>
+            </div>
+            <div class="form-body">
+                <!-- Login Form -->
+                <form id="loginForm">
+                    <h3 class="">Login</h3>
+                    <input class="modal_input" type="email" placeholder="Email" required>
+                    <input class="modal_input" type="password" placeholder="Password" required>
+                    <button class="modalbtn" type="submit">Login</button>
+                </form>
+                <!-- Signup Form -->
+                <form id="signupForm">
+                    <h3>Sign Up</h3>
+                    <input class="modal_input" type="text" placeholder="Name" required>
+                    <input class="modal_input" type="email" placeholder="Email" required>
+                    <input class="modal_input" type="password" placeholder="Password" required>
+                    <button class="modalbtn" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- ------------------------------------------------Start Hero Section------------------------------------------------------- -->
+    <div class="container-fluid Hero_section position-relative" style="overflow: hidden;">
+        <div class="overlay"></div>
+        <div class="row p-4 text-white text-center text-lg-start  align-items-center">
+            <div class="col-lg-6 ">
+                <h2 class="hero_tittle">Mishra Travel and Cargo Movers</h2>
+                <p class="hero_para mt-3">"Reliable and efficient transport solutions for hassle-free travel and cargo movement across destinations."</p>
+                <button class="common_btn mt-4 align-items-center"><span><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="24" height="24" color="#fff" fill="none">
+                            <path d="M17 7L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path
+                                d="M11 6.13151C11 6.13151 16.6335 5.65662 17.4885 6.51153C18.3434 7.36645 17.8684 13 17.8684 13"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></span> Get Started</button>
+            </div>
+            <div class="col-lg-6">
+                <div class="mt-5 mt-lg-0">
+                    <img class="hero_img" src="assets/hero_1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------End Hero Section-------------------------------------------------------  -->
+    <!-- --------------------------------------------------------Start Online Booking-------------------------------------------- -->
+    <div class="container-fluid p-0" style="overflow: hidden;">
+        <div class="row">
+            <div class="col-lg-4 Contact_section">
+                <div class="p-4 p-lg-0">
+                    <h3 class="fw-bold text-center text-lg-start">Call Now !</h3>
+                    <div class="d-flex align-items-center">
+                        <div class="Contact_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44"
+                                color="#000000" fill="none">
+                                <path
+                                    d="M9.1585 5.71223L8.75584 4.80625C8.49256 4.21388 8.36092 3.91768 8.16405 3.69101C7.91732 3.40694 7.59571 3.19794 7.23592 3.08785C6.94883 3 6.6247 3 5.97645 3C5.02815 3 4.554 3 4.15597 3.18229C3.68711 3.39702 3.26368 3.86328 3.09497 4.3506C2.95175 4.76429 2.99278 5.18943 3.07482 6.0397C3.94815 15.0902 8.91006 20.0521 17.9605 20.9254C18.8108 21.0075 19.236 21.0485 19.6496 20.9053C20.137 20.7366 20.6032 20.3131 20.818 19.8443C21.0002 19.4462 21.0002 18.9721 21.0002 18.0238C21.0002 17.3755 21.0002 17.0514 20.9124 16.7643C20.8023 16.4045 20.5933 16.0829 20.3092 15.8362C20.0826 15.6393 19.7864 15.5077 19.194 15.2444L18.288 14.8417C17.6465 14.5566 17.3257 14.4141 16.9998 14.3831C16.6878 14.3534 16.3733 14.3972 16.0813 14.5109C15.7762 14.6297 15.5066 14.8544 14.9672 15.3038C14.4304 15.7512 14.162 15.9749 13.834 16.0947C13.5432 16.2009 13.1588 16.2403 12.8526 16.1951C12.5071 16.1442 12.2426 16.0029 11.7135 15.7201C10.0675 14.8405 9.15977 13.9328 8.28011 12.2867C7.99738 11.7577 7.85602 11.4931 7.80511 11.1477C7.75998 10.8414 7.79932 10.457 7.90554 10.1663C8.02536 9.83828 8.24905 9.56986 8.69643 9.033C9.14586 8.49368 9.37058 8.22402 9.48939 7.91891C9.60309 7.62694 9.64686 7.3124 9.61719 7.00048C9.58618 6.67452 9.44362 6.35376 9.1585 5.71223Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="ps-2">
+                            <p class="m-0 p-0">Call for detail information</p>
+                            <h2 class="m-0 p-0">+91-9958581183</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 p-0">
+                <div class="booking-section">
+                    <h2 class="text-center text-lg-start fw-bold text-danger">Online Booking</h2>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="fromLocation" class="form-label">From</label>
+                                <select class="form-select" id="fromLocation">
+                                    <option selected>Location 1</option>
+                                    <option value="1">Location 2</option>
+                                    <option value="2">Location 3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="toLocation" class="form-label">To</label>
+                                <select class="form-select" id="toLocation">
+                                    <option selected>Location 1</option>
+                                    <option value="1">Location 2</option>
+                                    <option value="2">Location 3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="whenDate" class="form-label">When</label>
+                                <input type="date" class="form-control" id="whenDate" placeholder="mm/dd/yyyy">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="time" class="form-label">Time</label>
+                                <div class="input-group">
+                                    <input type="time" class="form-control" id="time">
+                                    <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="seat" class="form-label">Seat</label>
+                                <input type="number" class="form-control" id="seat" placeholder="Number of Seats">
+                            </div>
+                            <div class="col-md-4 d-flex align-items-end">
+                                <button type="submit" class="btn btn-book w-100">
+                                    <i class="bi bi-bus-front"></i> Book a Bus
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------------------------------End Online Booking-------------------------------------------- -->
+
+    <!-- --------------------------------------------------------Start About Section-------------------------------------------- -->
+    <div class="container-fluid p-4">
+        <div class="row align-items-center text-center text-lg-start">
+            <div class="col-lg-6">
+                <div>
+                    <h3 class="text-uppercase fw-bold fs-2">A bus rental that's affordable and comfortable</h3>
+                    <p>Experience affordable and comfortable bus rentals with Mishra Travel and Cargo Movers, offering well-maintained vehicles, professional drivers, and seamless travel for every journey.</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2 class="fw-bold counter_text "> <span class="stats-number">25</span>+</h2>
+                            <h5>Bus Ready</h5>
+                            <p>Over 25 buses ready for rental, ensuring reliable, comfortable, and affordable travel solutions anytime.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bold counter_text "> <span class="stats-number">97</span>%</h2>
+                            <h5>Satisfied Customer</h5>
+                            <p>97% satisfied customers trust Mishra Travel and Cargo Movers for reliable, affordable, and hassle-free services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <img src="assets/about.jpg" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------------------------------End About Section-------------------------------------------- -->
+    <!-- --------------------------------------------------------Start who_we_are Section-------------------------------------------- -->
+     <div class="conatiner-fluid p-4">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <div class="text-lg-end text-center">
+                    <p class="text-uppercase fw-bold text-danger">Who We Are</p>
+                    <h2 class="fs-1 fw-bold text-uppercase">Enjoy the journey – travel with us</h2 class="fs-1 fw-bold">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div>
+                    <p class="text-center text-lg-start">Enjoy the journey with Mishra Travel and Cargo Movers! We provide comfortable, reliable, and affordable transportation solutions tailored to your needs. Whether it's a family trip, corporate event, or group tour, our well-maintained buses and professional drivers ensure a safe and memorable travel experience. Trust us to make every journey special!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 p-0 mt-4">
+                <img src="assets/who_1.jpg" width="100%" alt="">
+            </div>
+            <div class="col-lg-4 p-0 mt-4">
+                <img src="assets/who_2.jpg" width="100%" alt="">
+            </div>
+            <div class="col-lg-4 p-0 mt-4">
+                <img src="assets/who_3.jpg" width="100%" alt="">
+            </div>
+        </div>
+     </div>
+         <!-- --------------------------------------------------------End who_we_are Section-------------------------------------------- -->
+
+ <!-- --------------------------------------------------------Start Premium Bus Charter Section-------------------------------------------- -->
+ <div class="container-fluid Project_Section mt-4">
+    <div class="overlay"></div>
+    <div class="row">
+        <h3 class="text-uppercase text-white fw-bold text-center">Latest offers For You</h3>
+    </div>
+    <div class="row">
+          
+        <div id="splide_1" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide p-4">
+                        <div class="text-center ProjecrCard">
+                            <img src="assets/coupon.png" width="25%" alt="">
+                            <h6 class="fw-bold ">Valid 01 Aug</h6>
+                            <p class="fw-normal">Save Up to Rs 250 on bus tickets</p>
+                        </div>
+    
+                    </li>
+                    <li class="splide__slide p-4">
+                        <div class="text-center ProjecrCard">
+                            <img src="assets/coupon_1.png" width="25%" alt="">
+                            <h6 class="fw-bold ">Valid 01 Aug</h6>
+                            <p class="fw-normal">Save Up to Rs 300 on AP,TS Routes</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide p-4">
+                        <div class="text-center ProjecrCard">
+                            <img src="assets/coupon_2.png" width="25%" alt="">
+                            <h6 class="fw-bold ">Valid 01 Aug</h6>
+                            <p class="fw-normal">Save Up to Rs 250 on bus tickets</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide p-4">
+                        <div class="text-center ProjecrCard">
+                            <img src="assets/coupon_3.png" width="25%" alt="">
+                            <h6 class="fw-bold ">Valid 01 Aug</h6>
+                            <p class="fw-normal">Save Up to Rs 300 on Delhi,Gurgaon,Noida</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+
+</div>
+   <!-- --------------------------------------------------------End Premium Bus Charter Section-------------------------------------------- -->
+<!-- ---------------------------------------------------------Start Service Section------------------------------------------------------------- -->
+ <div class="container-fluid p-4">
+    <div class="row justify-content-center text-center">
+<div class="col-lg-8">
+    <div>
+        <p class="text-uppercase fw-bold text-danger">Our Services</p>
+        <h2 class="text-uppercase fw-bold ">We Provide Best Services For You</h2>
+        <p>We provide the best services for you, offering reliable transportation, affordable rates, and exceptional customer care to ensure a comfortable and safe journey every time.</p>
+    </div>
+</div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-4 mt-4">
+            <div class="service_card">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#D72024" fill="none">
+                    <path d="M6.00391 10V5M11.0039 10V5M16.0039 10V5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.01609 17C3.59614 17 2.88616 17 2.44503 16.5607C2.00391 16.1213 2.00391 15.4142 2.00391 14V8C2.00391 6.58579 2.00391 5.87868 2.44503 5.43934C2.88616 5 3.59614 5 5.01609 5H12.1005C15.5742 5 17.311 5 18.6402 5.70624C19.619 6.22633 20.4346 7.0055 20.9971 7.95786C21.7609 9.25111 21.8332 10.9794 21.9779 14.436C22.0168 15.3678 22.0363 15.8337 21.8542 16.1862C21.7204 16.4454 21.5135 16.6601 21.2591 16.8041C20.913 17 20.4449 17 19.5085 17H19.0039M9.00391 17H15.0039" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7.00391 19C8.10848 19 9.00391 18.1046 9.00391 17C9.00391 15.8954 8.10848 15 7.00391 15C5.89934 15 5.00391 15.8954 5.00391 17C5.00391 18.1046 5.89934 19 7.00391 19Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M17.0039 19C18.1085 19 19.0039 18.1046 19.0039 17C19.0039 15.8954 18.1085 15 17.0039 15C15.8993 15 15.0039 15.8954 15.0039 17C15.0039 18.1046 15.8993 19 17.0039 19Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M1.99609 10.0009H15.3641C15.9911 10.0009 16.2041 10.3681 16.6841 10.9441C17.2361 11.4841 17.6093 11.8628 18.1241 11.9401C18.8441 12.0481 21.5081 11.9941 21.5081 11.9941" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <h4 class="fw-bold ">
+                    School Bus Rental</h4>
+                    <p class="text-muted">Safe and reliable school bus rentals with professional drivers and well-maintained vehicles for every trip.</p>
+                    <a class="Learn_More" href="">Learn More</a>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-4">
+            <div class="service_card">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#D72024" fill="none">
+                    <path d="M5.78223 4.18192C6.43007 3.68319 6.754 3.43383 7.12788 3.27323C7.29741 3.20041 7.47367 3.14158 7.65459 3.09741C8.0536 3 8.4767 3 9.32289 3H14.6771C15.5233 3 15.9464 3 16.3454 3.09741C16.5263 3.14158 16.7026 3.20041 16.8721 3.27323C17.246 3.43383 17.5699 3.68319 18.2178 4.18192C20.3644 5.83448 21.4378 6.66077 21.8057 7.73078C21.9694 8.20673 22.0305 8.70728 21.9858 9.20461C21.8852 10.3227 21.0379 11.346 19.3433 13.3925L15.3498 18.2153C13.8126 20.0718 13.044 21 12 21C10.956 21 10.1874 20.0718 8.65018 18.2153L4.65671 13.3925C2.96208 11.346 2.11476 10.3227 2.0142 9.20461C1.96947 8.70728 2.03064 8.20673 2.1943 7.73078C2.56224 6.66077 3.63557 5.83448 5.78223 4.18192Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M10 8.5H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4 class="fw-bold ">
+                    Wedding Guests</h4>
+                    <p class="text-muted">Comfortable and convenient transportation for wedding guests, ensuring a memorable and hassle-free experience.</p>
+                    <a class="Learn_More" href="">Learn More</a>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-4">
+            <div class="service_card">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#D72024" fill="none">
+                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M21.5 13.5H16.5743C15.7322 13.5 15.0706 14.2036 14.6995 14.9472C14.2963 15.7551 13.4889 16.5 12 16.5C10.5111 16.5 9.70373 15.7551 9.30054 14.9472C8.92942 14.2036 8.26777 13.5 7.42566 13.5H2.5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                <h4 class="fw-bold ">
+                    Corporate Travelers</h4>
+                    <p class="text-muted">Efficient and reliable transportation solutions for corporate travelers, combining comfort, punctuality, and professionalism.</p>
+                    <a class="Learn_More" href="">Learn More</a>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-4">
+            <div class="service_card">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#D72024" fill="none">
+                    <path d="M5 7.66667C5 7.04669 5 6.73669 5.06815 6.48236C5.25308 5.79218 5.79218 5.25308 6.48236 5.06815C6.73669 5 7.04669 5 7.66667 5H16.3333C16.9533 5 17.2633 5 17.5176 5.06815C18.2078 5.25308 18.7469 5.79218 18.9319 6.48236C19 6.73669 19 7.04669 19 7.66667C19 8.90663 19 9.52661 18.8637 10.0353C18.4938 11.4156 17.4156 12.4938 16.0353 12.8637C15.5266 13 14.9066 13 13.6667 13H10.3333C9.09337 13 8.47339 13 7.96472 12.8637C6.58436 12.4938 5.50617 11.4156 5.1363 10.0353C5 9.52661 5 8.90663 5 7.66667Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M18 11C18.3716 11.5839 18.5574 11.8759 18.689 12.1897C18.8062 12.4694 18.8913 12.7615 18.9425 13.0604C19 13.3959 19 13.7419 19 14.4341V16C19 18.8284 19 20.2426 18.1213 21.1213C17.2426 22 15.8284 22 13 22H11C8.17157 22 6.75736 22 5.87868 21.1213C5 20.2426 5 18.8284 5 16V14.4341C5 13.7419 5 13.3959 5.0575 13.0604C5.10874 12.7615 5.1938 12.4694 5.31105 12.1897C5.44263 11.8759 5.62842 11.5839 6 11" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M5 20C4.32352 20 3.98528 20 3.70219 19.922C3.08287 19.7512 2.58068 19.3162 2.34157 18.7433C2.23227 18.4815 2.19862 18.1593 2.1313 17.515L2.06691 16.8986C1.98995 16.1619 1.95147 15.7936 2.1089 15.5209C2.46075 14.9115 3.25125 15.0052 3.85704 15.0052H5" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M19 20C19.6765 20 20.0147 20 20.2978 19.9219C20.9171 19.751 21.4193 19.3155 21.6584 18.742C21.7677 18.4799 21.8014 18.1574 21.8687 17.5124L21.9331 16.8954C21.9955 16.2975 22.1529 15.5626 21.5709 15.1773C21.3031 15 20.9164 15 20.143 15H19" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M9 14.5L9 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15 14.5L15 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15 5C15 3.34315 13.6569 2 12 2C10.3431 2 9 3.34315 9 5" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+                <h4 class="fw-bold ">
+                    
+Private Travelers</h4>
+                    <p class="text-muted">Personalized and comfortable transportation options for private travelers, ensuring a hassle-free and enjoyable journey.</p>
+                    <a class="Learn_More" href="">Learn More</a>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-4">
+            <div class="service_card">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#D72024" fill="none">
+                    <path d="M10 9.50003L5.27531 4.47565C4.85705 4.0245 4.92403 3.69496 5.41729 3.40965C6.34454 2.8733 7.06689 2.85873 8.04428 3.39511L12.949 6.08675C13.2982 6.27836 13.6406 6.47259 14 6.57855" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.5 13.6632L14.6103 20.4697C14.7826 21.0255 15.086 21.1263 15.556 20.8568C16.4396 20.3501 16.7958 19.765 16.8197 18.7107L16.9395 13.4198C16.9555 12.7131 16.9526 12.0215 17.5 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.32846 10.9843L10.2154 9.60557L14.6377 6.38136L14.6416 6.37851L14.6491 6.37301C14.7535 6.29661 16.3094 5.16238 17.1919 4.77581C18.2765 4.30067 19.2869 4.52156 20.3739 4.82515C20.9362 4.98218 21.2173 5.06069 21.4202 5.20717C21.742 5.43958 21.9513 5.79728 21.9943 6.18852C22.0215 6.4351 21.9498 6.71459 21.8065 7.27356L21.8065 7.27358C21.5294 8.35431 21.2181 9.32819 20.2588 10.0175C19.4782 10.5784 17.7045 11.341 17.5856 11.3919L17.5771 11.3955L17.5726 11.3974L12.5317 13.5645L10.3782 14.4876L10.3782 14.4876C9.5974 14.8223 9.207 14.9896 8.94139 15.3002C8.31933 16.0275 8.23148 17.3438 7.99931 18.2494C7.87101 18.7498 7.16748 19.6171 6.54058 19.4869C6.15355 19.4065 6.14613 18.922 6.09796 18.6131L5.6342 15.6389C5.5233 14.9276 5.51479 14.9131 4.94599 14.4627L2.56757 12.5793C2.32053 12.3836 1.89903 12.135 2.022 11.7641C2.22119 11.1633 3.33408 10.9957 3.83747 11.1363C4.74834 11.3907 5.94747 11.9738 6.89684 11.8058C7.3022 11.7341 7.64428 11.4842 8.32844 10.9843L8.32846 10.9843Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4 class="fw-bold ">
+                    Airport Shuttles</h4>
+                    <p class="text-muted">Reliable and punctual airport shuttles, providing seamless transfers with comfort and convenience for every traveler.</p>
+                    <a class="Learn_More" href="">Learn More</a>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-4">
+            <div class="service_card">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#D72024" fill="none">
+                    <path d="M17 20.5V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M7 20.5V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 6.78186C4 6.14251 4 5.82283 4.17387 5.43355C4.34773 5.04428 4.52427 4.88606 4.87736 4.56964C6.03437 3.53277 8.36029 2 12 2C15.6397 2 17.9656 3.53277 19.1226 4.56964C19.4757 4.88606 19.6523 5.04428 19.8261 5.43355C20 5.82283 20 6.14251 20 6.78186V14C20 16.8284 20 18.2426 19.1213 19.1213C18.2426 20 16.8284 20 14 20H10C7.17157 20 5.75736 20 4.87868 19.1213C4 18.2426 4 16.8284 4 14V6.78186Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M4 14C4 14 7.73333 15 12 15C16.2667 15 20 14 20 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4.5 17.5H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M18 17.5H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11 17.5L13 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 6H20" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M2 9L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M22 9L22 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h4 class="fw-bold ">
+                    Tours & Excursions</h4>
+                    <p class="text-muted">Experience comfortable and hassle-free tours and excursions with our reliable bus rental services, perfect for group adventures.</p>
+                    <a class="Learn_More" href="">Learn More</a>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- ---------------------------------------------------------End Service Section------------------------------------------------------------- -->
+<!-- -----------------------------------------------------------Start Chhose The Bus Section---------------------------------------------------- -->
+ <div class="container-fluid p-4">
+    <div class="row align-items-center text-center text-lg-start">
+        <div class="col-lg-4">
+            <p class="fw-bold text-danger text-uppercase">Choose The Bus</p>
+            <h2 class="fw-bold  text-uppercase">Get on the road with our bus rental</h2>
+        </div>
+        <div class="col-lg-8">
+            <p class="">Get on the road with our bus rental service and experience the perfect blend of comfort, affordability, and reliability. Whether you're planning a group outing, corporate event, or school trip, our fleet of well-maintained buses and professional drivers ensure a smooth and enjoyable journey. With flexible options and excellent customer service, we guarantee a stress-free travel experience. Trust us to take you where you need to go, comfortably and safely.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 mt-5">
+            <div class="Bus_Choose_card">
+                <img src="assets/choose.jpg" width="100%" alt="">
+               <div class="p-4">
+                <h4 class="fw-bold text-danger">Setra Bus</h4>
+                <p>Travel in style and comfort with our Setra bus, offering spacious seating, modern amenities, and a smooth ride for both short and long journeys.</p>
+                <div class="row">
+                    <button class="common_btn rounded bg-danger">View Details</button>
+                </div>
+               </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-5">
+            <div class="Bus_Choose_card">
+                <img src="assets/choose_1.jpg" width="100%" alt="">
+               <div class="p-4">
+                <h4 class="fw-bold text-danger">Van Hool Bus</h4>
+                <p>Enjoy a luxurious travel experience with our Van Hool bus, featuring comfortable seating, top-notch amenities, and reliable performance for all types of journeys.</p>
+                <div class="row">
+                    <button class="common_btn rounded bg-danger">View Details</button>
+                </div>
+               </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-5">
+            <div class="Bus_Choose_card">
+                <img src="assets/choose_2.jpg" width="100%" alt="">
+               <div class="p-4">
+                <h4 class="fw-bold text-danger">MCI Bus </h4>
+                <p>Experience the ultimate comfort and reliability with our MCI bus, designed for long and short journeys. Equipped with spacious seating,   it guarantees a smooth and enjoyable ride</p>
+                <div class="row">
+                    <button class="common_btn rounded bg-danger">View Details</button>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- -----------------------------------------------------------End Chhose The Bus Section---------------------------------------------------- -->
+<!-- --------------------------------------------------------------Start Why Choose Us------------------------------------------------------------- -->
+<div class="container-fluid Choose_Us_Section mt-4">
+    <div class="overlay"></div>
+    <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          
+            <h2 class="fw-bold text-uppercase text-white">Riding with us, your satisfaction is guaranteed!</h2>
+            <p class="text-white">Riding with us guarantees your satisfaction! Enjoy a comfortable, safe, and affordable journey with our well-maintained buses and professional drivers every time you travel.</p>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-lg-3 mt-4">
+        <div class="text-white text-center">
+            <div class="bg-warning p-2  d-inline-flex mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" color="#000000" fill="none">
+                    <path d="M11.4743 17.3058C14.4874 14.0819 17.3962 11.8949 21.0501 8.79776C22.1437 7.87072 22.3126 6.24578 21.4547 5.09453C20.5429 3.87098 18.8103 3.62642 17.6376 4.59913C14.2907 7.37521 11.6868 10.0482 9.21679 12.9051C9.08718 13.055 9.02237 13.13 8.95511 13.1722C8.78453 13.2792 8.57138 13.2803 8.3997 13.1751C8.33199 13.1336 8.26707 13.0601 8.13722 12.9131L6.82103 11.4229C5.6201 10.0631 3.46608 10.2137 2.46339 11.7274C1.76171 12.7867 1.86569 14.1905 2.71567 15.1334L4.7796 17.4229C6.32334 19.1353 7.09521 19.9916 8.02185 19.9999C8.94849 20.0083 9.79043 19.1075 11.4743 17.3058Z" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+            </div>
+            <h4 class="fw-bold">Safety & Security</h4>
+            <p>Your safety and security are our top priority on every journey.</p>
+        </div>
+    </div>
+    <div class="col-lg-3 mt-4">
+        <div class="text-white text-center">
+            <div class="bg-warning p-2  d-inline-flex mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" color="#000000" fill="none">
+                    <path d="M11.4743 17.3058C14.4874 14.0819 17.3962 11.8949 21.0501 8.79776C22.1437 7.87072 22.3126 6.24578 21.4547 5.09453C20.5429 3.87098 18.8103 3.62642 17.6376 4.59913C14.2907 7.37521 11.6868 10.0482 9.21679 12.9051C9.08718 13.055 9.02237 13.13 8.95511 13.1722C8.78453 13.2792 8.57138 13.2803 8.3997 13.1751C8.33199 13.1336 8.26707 13.0601 8.13722 12.9131L6.82103 11.4229C5.6201 10.0631 3.46608 10.2137 2.46339 11.7274C1.76171 12.7867 1.86569 14.1905 2.71567 15.1334L4.7796 17.4229C6.32334 19.1353 7.09521 19.9916 8.02185 19.9999C8.94849 20.0083 9.79043 19.1075 11.4743 17.3058Z" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+            </div>
+            <h4 class="fw-bold">On Time & Punctual</h4>
+            <p>Always on time and punctual, ensuring reliable travel for every journey.</p>
+        </div>
+    </div>
+    <div class="col-lg-3 mt-4">
+        <div class="text-white text-center">
+            <div class="bg-warning p-2  d-inline-flex mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" color="#000000" fill="none">
+                    <path d="M11.4743 17.3058C14.4874 14.0819 17.3962 11.8949 21.0501 8.79776C22.1437 7.87072 22.3126 6.24578 21.4547 5.09453C20.5429 3.87098 18.8103 3.62642 17.6376 4.59913C14.2907 7.37521 11.6868 10.0482 9.21679 12.9051C9.08718 13.055 9.02237 13.13 8.95511 13.1722C8.78453 13.2792 8.57138 13.2803 8.3997 13.1751C8.33199 13.1336 8.26707 13.0601 8.13722 12.9131L6.82103 11.4229C5.6201 10.0631 3.46608 10.2137 2.46339 11.7274C1.76171 12.7867 1.86569 14.1905 2.71567 15.1334L4.7796 17.4229C6.32334 19.1353 7.09521 19.9916 8.02185 19.9999C8.94849 20.0083 9.79043 19.1075 11.4743 17.3058Z" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+            </div>
+            <h4 class="fw-bold">Professional Drivers</h4>
+            <p>Our professional drivers ensure a safe, smooth, and enjoyable travel experience every time.</p>
+        </div>
+    </div>
+    <div class="col-lg-3 mt-4">
+        <div class="text-white text-center">
+            <div class="bg-warning p-2  d-inline-flex mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" color="#000000" fill="none">
+                    <path d="M11.4743 17.3058C14.4874 14.0819 17.3962 11.8949 21.0501 8.79776C22.1437 7.87072 22.3126 6.24578 21.4547 5.09453C20.5429 3.87098 18.8103 3.62642 17.6376 4.59913C14.2907 7.37521 11.6868 10.0482 9.21679 12.9051C9.08718 13.055 9.02237 13.13 8.95511 13.1722C8.78453 13.2792 8.57138 13.2803 8.3997 13.1751C8.33199 13.1336 8.26707 13.0601 8.13722 12.9131L6.82103 11.4229C5.6201 10.0631 3.46608 10.2137 2.46339 11.7274C1.76171 12.7867 1.86569 14.1905 2.71567 15.1334L4.7796 17.4229C6.32334 19.1353 7.09521 19.9916 8.02185 19.9999C8.94849 20.0083 9.79043 19.1075 11.4743 17.3058Z" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+            </div>
+            <h4 class="fw-bold">Well Maintenance</h4>
+            <p>Our well-maintained vehicles guarantee a comfortable and reliable travel experience on every journey.</p>
+        </div>
+    </div>
+</div>
+</div>
+<!-- --------------------------------------------------------------End Why Choose Us------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------Start How It Works----------------------------------------------------------------- -->
+ <div class="container-fluid p-4">
+    <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+            <p class=" fw-bold text-uppercase text-danger">How It Works</p>
+            <h2 class="fw-bold text-uppercase ">4 Steps To Booking Our Bus</h2>
+            <p class="">Booking our bus is simple and quick with four easy steps to ensure a smooth experience.</p>
+       
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 mt-4">
+            <div class="text-center Start_Card First_Start_Card ">
+                <img class="mb-3" src="assets/one.png" width="20%" alt="">
+                <h4 class="fw-bold text-white">Select Your Bus</h4>
+                <p class="text-white">Choose the perfect bus for your trip from our fleet.</p>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-4">
+            <div class="text-center Start_Card ">
+                <img class="mb-3" src="assets/two.png" width="20%" alt="">
+                <h4 class="fw-bold text-danger">Booking & Confirm</h4>
+                <p>Book your bus and confirm the details for a smooth journey.</p>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-4">
+            <div class="text-center Start_Card ">
+                <img class="mb-3" src="assets/three.png" width="20%" alt="">
+                <h4 class="fw-bold text-danger">Booking Payment</h4>
+                <p>Make a secure payment to confirm your bus booking instantly.</p>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-4">
+            <div class="text-center Start_Card ">
+                <img class="mb-3" src="assets/four.png" width="20%" alt="">
+                <h4 class="fw-bold text-danger">Start Your Roadtrip</h4>
+                <p>Once booked, start your road trip and enjoy a  memorable journey!</p>
+            </div>
+        </div>
+    </div>
+ </div>
+ <!-- ------------------------------------------------------------------End How It Works----------------------------------------------------------------- -->
+ <!-- -----------------------------------------------------------------------Start Testimonials---------------------------------------------------------------  -->
+ <div class="container-fluid testimonials-section p-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Image Section -->
+        <div class="col-md-6 left-image">
+          <img src="assets/testi.jpg" alt="Testimonial Image">
+          <div class="quote-icon">
+            <i class="bi bi-quote"></i>
+          </div>
+        </div>
+
+        <!-- Testimonial Text Section -->
+        <div class="col-md-6 p-4 text-center text-lg-start">
+          <p class="text-uppercase text-danger fw-bold">Testimonials</p>
+          <h2 class="text-uppercase  fw-bold mb-4">What are they saying</h2>
+         
+          <div id="splide" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="testimonial-card d-flex align-items-start">
+                            <div class="profile-info">
+                              <p class="mb-0">
+                                I booked a bus for my family trip to Agra with Mishra Travels and Cargo Movers. The entire process, from booking to the actual journey, was flawless. The bus was spacious and well-maintained. Great value for money!   </p>
+                              <h6 class="mt-2 mb-0">Anita Meena</h6>
+                             
+                            </div>
+                          </div>
+    
+                    </li>
+                    <li class="splide__slide">
+                        <div class="testimonial-card d-flex align-items-start">
+                            <div class="profile-info">
+                              <p class="mb-0">
+                                Mishra Travels and Cargo Movers provided excellent service for our corporate outing. The staff was courteous, and the booking process was seamless. The bus arrived on time and the journey was hassle-free. </p>
+                              <h6 class="mt-2 mb-0">Rohan Kumar</h6>
+                            
+                            </div>
+                          </div>
+                    </li>
+    
+                </ul>
+            </div>
+        </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- -----------------------------------------------------------------------End Testimonials---------------------------------------------------------------  -->
+ <!-- -----------------------------------------------------------------------Start Faq---------------------------------------------------------------  -->
+  <div class="conatiner-fluid p-4">
+    <div class="row align-items-center">
+        <div class="col-lg-4">
+            <p class="fw-bold text-uppercase text-danger text-center text-lg-start">
+                Frequently Asked Questions</p>
+                <p class="text-center text-lg-start">Here are the answers to some of the most frequently asked questions about our bus rental services, booking process, and customer support to help you.</p>
+      <div class="Have_Ques p-4">
+<h4 class="fw-bold text-danger">Have a Question?</h4>
+<p> We're here to help with any inquiries!</p>
+<a href=""style="text-decoration: none;"><p class="fw-bold text-danger" >Contact Us</p></a>
+      </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="">
+           
+                    <div class="accordion accordion-flush mt-3" id="accordionFlushExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseOne"
+                          >
+                          How do I book a bus with Mishra Bus Booking Service?
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapseOne"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingOne"
+                          data-bs-parent="#accordionFlushExample"
+                        >
+                          <div class="accordion-body">
+                            We offer a variety of buses, including luxury coaches, mini-buses, and standard buses, to suit different group sizes and needs.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseTwo"
+                          >
+                          Can I modify or cancel my booking?
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapseTwo"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingTwo"
+                          data-bs-parent="#accordionFlushExample"
+                        >
+                          <div class="accordion-body">
+                            Yes, you can modify or cancel your booking by contacting our customer service team. Please refer to our cancellation policy for details.  </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseThree"
+                          >
+                          How do you ensure the safety of passengers?
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapseThree"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingThree"
+                          data-bs-parent="#accordionFlushExample"
+                        >
+                          <div class="accordion-body">
+                            We prioritize safety with well-maintained buses, experienced drivers, and adherence to strict safety protocols.  </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseThree"
+                          >
+                          Do you offer customized travel packages?
+                          </button>
+                        </h2>
+                        <div
+                          id="flush-collapseFour"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingFour"
+                          data-bs-parent="#accordionFlushExample"
+                        >
+                          <div class="accordion-body">
+                            Yes, we provide personalized travel packages tailored to your specific needs and preferences. Contact us to discuss your requirements. </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+            </div>
+    </div>
+  </div>
+  <!-- -----------------------------------------------------------------------End Faq---------------------------------------------------------------  -->
+ <!-- -------------------------------------------------------------------------Start Footer-------------------------------------------------------------- -->
+  <div class="container-fluid p-4" style="background-color: #201C30;">
+    <div class="row justify-content-center text-center text-lg-start">
+<div class="col-lg-4">
+    <img src="assets/logo.png" width="20%" alt="">
+    <p class="text-muted mt-2">Mishra Travels and Cargo Movers offers reliable and affordable transportation solutions.Trust us for safe, timely, and hassle-free journeys every time.</p>
+    <p class="bg-danger text-white py-2 px-4 d-inline-flex fw-bold rounded">+91-9958580360</p>
+</div>
+<div class="col-lg-4 text-white ">
+    <div>
+        <h4 class="fw-bold">Company</h4>
+        <ul class="list-unstyled fw-bold  Footer_link">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+           
+        </ul>
+    </div>
+</div>
+<div class="col-lg-4 text-white">
+    <h4 class="fw-bold">Get in Touch</h4>
+    <p class="mb-1 text-muted">
+        <i class="me-lg-2 text-white fa-solid fa-location-dot"></i> Surajpur Road Bidhuna Auraiya, Uttar Pradesh – 206243
+      </p>
+      <p class="mb-1 text-muted"><i class="me-lg-2 text-white fa-solid fa-phone"></i> +91 9958581183</p>
+      <p class="mb-1 text-muted">
+        <i class="me-lg-2 text-white fa-solid fa-envelope"></i>
+        mihsratravels01@gmail.com
+      </p>
+</div>
+    </div>
+    <hr class="text-white">
+    <div class="d-flex justify-content-lg-between justify-content-center flex-wrap small">
+        <div>
+            <p class="text-white text-center ">Copyright <i class="fa-regular fa-copyright"></i> 2025 - Mishra Travels and Cargo Movers by Standup Startups Pvt. Ltd.</p>
+        </div>
+        <div>
+            <p class="text-white"> <span class="pointer">Terms of Use</span> | <span class="pointer">Privacy Policy</span>  </p>
+        </div>
+    </div>
+  </div>
+   <!-- -------------------------------------------------------------------------End Footer-------------------------------------------------------------- -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#splide', {
+                type: 'loop',
+                perPage: 1,
+                autoplay: true,
+            }).mount();
+        });
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#splide_1', {
+        type: 'loop',
+        perPage: 3, 
+        autoplay: true,
+        breakpoints: {
+            768: { 
+                perPage: 1, 
+            },
+        },
+    }).mount();
+});
+
+    </script>
+</body>
+
+</html>
