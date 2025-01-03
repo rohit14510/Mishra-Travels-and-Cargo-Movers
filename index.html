@@ -118,7 +118,7 @@
                 <div class="booking-section">
                     <h2 class="text-center text-lg-start fw-bold text-danger">Online Booking</h2>
                     <form>
-                        <div class="row g-3">
+                        <!-- <div class="row g-3">
                             <div class="col-md-4">
                                 <label for="fromLocation" class="form-label">From</label>
                                 <select class="form-select" id="fromLocation">
@@ -151,11 +151,41 @@
                                 <input type="number" class="form-control" id="seat" placeholder="Number of Seats">
                             </div>
                             <div class="col-md-4 d-flex align-items-end">
-                                <button type="submit" class="btn btn-book w-100">
-                                    <i class="bi bi-bus-front"></i> Book a Bus
-                                </button>
+                               <button  class="btn btn-book w-100">
+                                <i class="bi bi-bus-front"></i> <a href="Search-results.html">Book a Bus</a> 
+                            </button>
                             </div>
-                        </div>
+                        </div> -->
+                        <!-- Search Section -->
+        <div class="card p-4 shadow">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label for="origin" class="form-label">Origin</label>
+                    <select id="origin" class="form-select">
+                        <option selected>Jaipur</option>
+                        <!-- Add more options -->
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="destination" class="form-label">Destination</label>
+                    <select id="destination" class="form-select">
+                        <option selected>Delhi</option>
+                        <!-- Add more options -->
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="onward-date" class="form-label">Onward Date</label>
+                    <input type="date" id="onward-date" class="form-control">
+                </div>
+                <div class="col-md-2">
+                    <label for="return-date" class="form-label">Return Date</label>
+                    <input type="date" id="return-date" class="form-control">
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <a class="btn btn-danger w-100" href="Search-results.html">Search</a>
+                </div>
+            </div>
+        </div>
                     </form>
                 </div>
 

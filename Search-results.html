@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mishra Travel and Cargo Movers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- --------------------------------------------Header----------------------------------------------------- -->
+    <header class="sticky-top shadow">
+        <div class="logo">
+            <a href="index.html"> <img src="assets/logo.png" width="15%" alt=""></a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <!-- <li><a href="#service">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li> -->
+                <li><a href="Contact.html">Contact</a></li>
+                <li class="bg-danger px-3 py-2 text-white"><a class="text-white" href="#loginModal"
+                        id="login-btn">Login</a></li>
+
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <span>&#9776;</span>
+        </div>
+    </header>
+    <!-- Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="form-container">
+                <input type="radio" name="formToggle" id="login" checked>
+                <input type="radio" name="formToggle" id="signup">
+                <div class="form-header">
+                    <label for="login">Login</label>
+                    <label for="signup">Sign Up</label>
+                </div>
+                <div class="form-body">
+                    <!-- Login Form -->
+                    <form id="loginForm">
+                        <h3 class="">Login</h3>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button class="modalbtn" type="submit">Login</button>
+                    </form>
+                    <!-- Signup Form -->
+                    <form id="signupForm">
+                        <h3>Sign Up</h3>
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button class="modalbtn" type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ------------------------------Start  Bus Search----------------------------------- -->
+    <div class="container-fluid mt-4">
+        <!-- Search Section -->
+        <div class="card p-4 shadow">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label for="origin" class="form-label">Origin</label>
+                    <select id="origin" class="form-select">
+                        <option selected>Jaipur</option>
+                        <!-- Add more options -->
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="destination" class="form-label">Destination</label>
+                    <select id="destination" class="form-select">
+                        <option selected>Delhi</option>
+                        <!-- Add more options -->
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="onward-date" class="form-label">Onward Date</label>
+                    <input type="date" id="onward-date" class="form-control">
+                </div>
+                <div class="col-md-2">
+                    <label for="return-date" class="form-label">Return Date</label>
+                    <input type="date" id="return-date" class="form-control">
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button class="btn btn-danger w-100">Search</button>
+                </div>
+            </div>
+        </div>
+        <!-- Filter Section -->
+        <div class="d-lg-block d-none">
+            <div class="d-flex justify-content-center align-items-center mt-4 ">
+                <button class="btn btn-light"><i class="fa-solid fa-less-than"></i></button>
+                <div class="d-flex">
+                    <button class="btn btn-light">Sat 04-Jan</button>
+                    <button class="btn btn-light">Sun 05-Jan</button>
+                    <button class="btn btn-light">Mon 06-Jan</button>
+                    <button class="btn btn-light">Tue 07-Jan</button>
+                    <button class="btn btn-light">Wed 08-Jan</button>
+                    <button class="btn btn-light">Thu 09-Jan</button>
+                    <button class="btn btn-light">Fri 10-Jan</button>
+                </div>
+                <button class="btn btn-light"><i class="fa-solid fa-greater-than"></i></button>
+            </div>
+        </div>
+        <hr>
+        <!-- Time Range -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row p-2">
+                    <div class="col-4 p-0">
+                        <select class="form-select">
+                            <option value="" hidden>Bus Type</option>
+                            <option >Ac</option>
+                            <option >Non Ac</option>
+                        </select>
+                    </div>
+                    <div class="col-4 p-0">
+                        <select class="form-select">
+                            <option value="" hidden>Boarding Point</option>
+                            <option >EDGAAH MAHALAXMI TRAVELS</option>
+                            <option >Narayan Singh Circle</option>
+                        </select>
+                    </div>
+                    <div class="col-4 p-0">
+                        <select class="form-select">
+                            <option value="" hidden>Dropping Point</option>
+                            <option >21 Old Fathepuri Delhi</option>
+                            <option >Mahipal pur Over Bridge (Airport)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Bus Details -->
+        <div class="card mt-4 shadow">
+            <div class="card-body table-responsive">
+                <table class="table table-bordered text-center align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Coach</th>
+                            <th>Service</th>
+                            <th>Bus Type</th>
+                            <th>Departure</th>
+                            <th>Duration</th>
+                            <th>Arrival</th>
+                            <th>Available Seat</th>
+                            <th>Fare</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="no-image.jpg" alt="Coach Image" class="img-fluid" style="max-width: 80px;">
+                                <p class="mt-2"></p>
+                            </td>
+                            <td>
+                                <p class="small">JPR-KTGDM Via</p>
+                            </td>
+                            <td style="width: 20%;">
+                                <p class="small">2+1, Bharat Benz Business Class Sleeper/Seater, AC, Non-Video (40
+                                    seats)</p>
+                            </td>
+                            <td>
+                                <p class="fw-bold">07:15 PM</p>
+                                <p class="small">Sat, 04 Jan</p>
+                                <p class="small hoverable" data-type="boarding">Boarding Points</p>
+                                <div class="hover-box text-start" id="boarding-points">
+                                    <h5 class="text-center">Boarding Points</h5>
+                                    <hr>
+                                    <p> <span class="text-primary pe-4">07:15 PM</span> Near Rawat Hotel Under Fly Over
+                                        Station Road </p>
+                                    <p> <span class="text-primary pe-4">07:45 PM</span> Narayan Singh Circle</p>
+
+                                </div>
+                            </td>
+                            <td>
+                                <p class="small">6h 45m</p>
+                            </td>
+                            <td>
+                                <p class="fw-bold">02:00 AM</p>
+                                <p class="small">Sun, 05 Jan</p>
+                                <p class="small hoverable" data-type="dropping">Dropping Points</p>
+                                <div class="hover-box text-start" id="dropping-points">
+                                    <h5 class="text-center">Dropping Points</h5>
+                                    <hr>
+                                    <p> <span class="text-primary pe-4">02:00 AM</span>Redfort Parking Opp Near Sunehri
+                                        Masjid </p>
+
+
+                                </div>
+                            </td>
+                            <td>
+                                <p>29</p>
+                                <p>Seats Available</p>
+                            </td>
+                            <td>
+                                <p> ₹ 797</p>
+                                <p class="text-decoration-line-through text-danger fw-bold">₹ 839</p>
+                            </td>
+                            <td><button class="btn btn-pink mt-2"  id="viewSeatsBtn">View Seats</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+ <!-- ------------------------------End Bus Search Details----------------------------------- -->
+
+
+<!-- ------------------------------Start View Seat Details----------------------------------- -->
+
+    <div class="container p-4" id="seatsContainer" style="display: none;">
+
+
+        <div class="row  align-items-center">
+            <div class="col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3">
+                        <h6>Seat Price</h6>
+                    </div>
+                    <div class="col-lg-9 p-0 ">
+                        <div class="btn-group ">
+                            <button class="btn btn-outline-secondary active">All</button>
+                            <button class="btn btn-outline-secondary">799</button>
+                            <button class="btn btn-outline-secondary">1199</button>
+                            <button class="btn btn-outline-secondary">1299</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+           <div class="col-lg-6 d-flex justify-content-end">
+            <div class="View_Seat_Cross"id="hideSeatsBtn">
+                <i class="fa-solid fa-xmark text-danger fs-5"></i>
+            </div>
+           </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="row mt-1 justify-content-end">
+                            <!-- Seat Layout -->
+                            <div class="row p-0">
+                                <div class="d-flex justify-content-end">
+                                    <div class="double_seat seat available">A</div>
+                                    <div class="double_seat seat available">B</div>
+                                </div>
+                            </div>
+                            <div class="row p-0">
+                                <div class="d-flex justify-content-end ">
+                                    <div class="double_seat booked">C</div>
+                                    <div class="double_seat booked">D</div>
+                                </div>
+                            </div>
+                            <div class="row p-0">
+                                <div class="d-flex justify-content-end">
+                                    <div class="double_seat booked">E</div>
+                                    <div class="double_seat booked">F</div>
+                                </div>
+                            </div>
+                            <div class="row p-0">
+                                <div class="d-flex justify-content-end">
+                                    <div class="double_seat seat available">G</div>
+                                    <div class="double_seat ladies">H</div>
+                                </div>
+                            </div>
+                            <div class="row p-0">
+                                <div class="d-flex justify-content-end ">
+                                    <div class="double_seat seat available">I</div>
+                                    <div class="double_seat seat available">J</div>
+                                </div>
+                            </div>
+                            <div class="row p-0">
+                                <div class="d-flex justify-content-end ">
+                                    <div class="double_seat booked">W</div>
+                                    <div class="double_seat seat available">X</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="row mt-1">
+                            <!-- Seat Layout -->
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="row justify-content-end">
+                                            <div class="single_seat available">1</div>
+                                            <div class="single_seat available">2</div>
+                                        </div>
+                                        <div class="row justify-content-end">
+                                            <div class="single_seat available">3</div>
+                                            <div class="single_seat available">4</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex ">
+                                            <div class="double_seat available">K</div>
+                                            <div class="double_seat available">L</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row justify-content-end">
+                                            <div class="single_seat available">5</div>
+                                            <div class="single_seat available">6</div>
+                                        </div>
+                                        <div class="row justify-content-end">
+                                            <div class="single_seat available">7</div>
+                                            <div class="single_seat available">8</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex">
+                                            <div class="double_seat available">M</div>
+                                            <div class="double_seat available">N</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex justify-content-end">
+                                            <div class="double_seat available">L1</div>
+                                            <div class="double_seat available">L2</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex">
+                                            <div class="double_seat booked">O</div>
+                                            <div class="double_seat booked">P</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex justify-content-end">
+                                            <div class="double_seat available">L3</div>
+                                            <div class="double_seat available">L4</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex">
+                                            <div class="double_seat available">Q</div>
+                                            <div class="double_seat available">R</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex justify-content-end">
+                                            <div class="double_seat booked">L5</div>
+                                            <div class="double_seat booked">L6</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex">
+                                            <div class="double_seat available">S</div>
+                                            <div class="double_seat available">T</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex justify-content-end">
+                                            <div class="double_seat available">L7</div>
+                                            <div class="double_seat available">L8</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex">
+                                            <div class="double_seat booked">U</div>
+                                            <div class="double_seat booked">V</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+             <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                       
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center"><span class="seat_Container available"></span> Available</li>
+                            <li class="d-flex align-items-center"><span class="seat_Container selected"></span> Selected</li>
+                            <li class="d-flex align-items-center"><span class="seat_Container booked"></span> Booked</li>
+                            <li class="d-flex align-items-center"><span class="seat_Container ladies"></span> Ladies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div>
+                        <h6>Fare Details</h6>
+                        <p>Seats: <span id="selected-seats">0</span></p>
+                        <p>Ticket Fare: ₹<span id="ticket-fare">0</span></p>
+                    </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                        <h6>Boarding Point</h6>
+                        <select class="form-select mb-3">
+                            <option value="">Select Boarding Point</option>
+                            <option value="point1">Point 1</option>
+                            <option value="point2">Point 2</option>
+                        </select>
+                        <p class="small text-muted"><span><i class="fa-solid fa-location-dot pe-3"></i></span>Point 1</p>
+                        <p class="small text-muted"><span><i class="fa-solid fa-mobile pe-3"></i></span>+9112345678</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div>
+                        <h6>Dropoff Point</h6>
+                        <select class="form-select mb-3">
+                            <option value="">Select Dropoff Point</option>
+                            <option value="pointA">Point A</option>
+                            <option value="pointB">Point B</option>
+                        </select>
+                        <p class="small text-muted"><span><i class="fa-solid fa-location-dot pe-3"></i></span>Point A</p>
+                        <p class="small text-muted"><span><i class="fa-solid fa-mobile pe-3"></i></span>+9112345678</p>
+                    </div>
+                </div>
+             </div>
+
+             <div class="row">
+                <div class="d-inline-flex justify-content-end mt-lg-5 mt-0">
+                    <button class="btn btn-danger " id="All_Details_Btn">Continue</button>
+                </div>
+             </div>
+
+           
+
+                
+            </div>
+        </div>
+    </div>
+<!-- ------------------------------End View Seat Details----------------------------------- -->
+
+
+<!-- ------------------------------Start All Over Details----------------------------------- -->
+<div class="container  p-4" id="All_Details" >
+    <div class="row">
+        <div class="col-lg-8 order-1 order-lg-0">
+            <div class="form-section">
+                <h5>Passenger Details</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Title</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A</td>
+                            <td><input type="text" class="form-control" placeholder="Title"></td>
+                            <td><input type="text" class="form-control" placeholder="Name"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-section">
+                <h5>Contact Details</h5>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Mobile</label>
+                        <div class="input-group">
+                            <span class="input-group-text">91</span>
+                            <input type="text" class="form-control" placeholder="Mobile">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="whatsappUpdates">
+                    <label class="form-check-label" for="whatsappUpdates">Send booking details and updates on WhatsApp</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h5>Please Enter Your Residential Location Address</h5>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label>Pin Code</label>
+                        <input type="text" class="form-control" placeholder="Pin code">
+                    </div>
+                    <div class="col-md-4">
+                        <label>State</label>
+                        <input type="text" class="form-control" placeholder="State">
+                    </div>
+                    <div class="col-md-4">
+                        <label>City</label>
+                        <input type="text" class="form-control" placeholder="City">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h5>Offers</h5>
+                <select class="form-select mb-3">
+                    <option selected>Eticket Discount</option>
+                    <option >Promocode Coupon</option>
+                </select>
+                <button class="btn btn-outline-primary">Applied</button>
+            </div>
+            <div class="form-section">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                     GST
+                    </label>
+                  </div>
+
+            </div>
+            <div class="radio-buttons">
+                <label>
+                  <input type="radio" name="payment" value="credit-card">
+                  Credit Card
+                </label>
+                <label>
+                  <input type="radio" name="payment" value="debit-card">
+                  Debit Card
+                </label>
+                <label>
+                  <input type="radio" name="payment" value="net-banking">
+                  Net Banking
+                </label>
+              </div>
+              <div class="upi_continer">
+                <div class="d-flex align-items-center gap-2">
+                    <input class="d-block" type="radio" name="payment" value="upi">
+                    <p class="m-0">UPI</p>
+                    <img src="assets/gpay.png" width="50px" alt="">
+                    <img src="assets/bhim.jpeg" width="80px" alt="">
+                    <img src="assets/phonepay.png" width="80px" alt="">
+                    <img src="assets/whatsapp.jpeg" width="30px" alt="">
+                    <img src="assets/paytm.png" width="50px" alt="">
+              </div>
+
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <input class="d-block" type="radio" name="payment" value="Paytm">
+                <img src="assets/paytm_1.png" width="80px" alt="">
+              </div>
+              <div class="text-center">
+                <p>By continuing you agree to our <span class="text-danger">TERMS & CONDITIONS</span> and <span class="text-danger">Cancellation Policies</span></p>
+                <button class="btn btn-danger">Proceed to Payment</button>
+              </div>
+        </div>
+
+        <div class="col-lg-4 order-0 order-lg-1  service-details">
+           <div class="d-flex justify-content-between align-items-center">
+            <h5>Service Details</h5>
+            <div class="View_Seat_Cross" id="Details_Hide-Btn">
+                <i class="fa-solid fa-xmark text-danger fs-5"></i>
+            </div>
+           </div>
+            <p><strong>From:</strong> Jaipur</p>
+            <p><strong>To:</strong> Delhi</p>
+            <p><strong>Date:</strong> 04/01/2025</p>
+            <p><strong>Service:</strong> JPR-KTGDM</p>
+            <p><strong>Seats:</strong> A</p>
+            <p><strong>Bus Type:</strong> 2+1, Bharat Benz Business Class Sleeper/Seater, AC, Non-Video (40 seats)</p>
+            <hr>
+            <p><strong>Boarding:</strong> 07:15 PM - Near Rawat Hotel Under Fly Over Station Road</p>
+            <p><a href="#">Nr. Rawat Hotel Location</a></p>
+            <p><strong>Dropoff:</strong> 02:00 AM - Redfort Parking Opp Near Sunehri Masjid</p>
+            <hr>
+            <h5>Fare Details</h5>
+            <p><strong>Ticket Fare:</strong> &#8377; 1199.00</p>
+            <p><strong>Discount:</strong> &#8377; 59.95</p>
+            <p><strong>GST (5%):</strong> &#8377; 56.95</p>
+            <p><strong>Grand Total:</strong> &#8377; 1196.00</p>
+            <p><strong>Payable Amount:</strong> &#8377; 1196.00</p>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------End All Over Details----------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- -------------------------------------------------------------------------Start Footer-------------------------------------------------------------- -->
+    <div class="container-fluid p-4" style="background-color: #201C30;">
+        <div class="row justify-content-center text-center text-lg-start">
+            <div class="col-lg-4">
+                <img src="assets/logo.png" width="20%" alt="">
+                <p class="text-muted mt-2">Mishra Travels and Cargo Movers offers reliable and affordable transportation
+                    solutions.Trust us for safe, timely, and hassle-free journeys every time.</p>
+
+                <p class="bg-danger text-white py-2 px-4 d-inline-flex fw-bold rounded">+91-9958580360</p>
+            </div>
+            <div class="col-lg-4 text-white ">
+                <div>
+                    <h4 class="fw-bold">Company</h4>
+                    <ul class="list-unstyled fw-bold  Footer_link">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-white">
+                <h4 class="fw-bold">Get in Touch</h4>
+                <p class="mb-1 text-muted">
+                    <i class="me-lg-2 text-white fa-solid fa-location-dot"></i> Surajpur Road Bidhuna Auraiya, Uttar
+                    Pradesh – 206243
+                </p>
+                <p class="mb-1 text-muted"><i class="me-lg-2 text-white fa-solid fa-phone"></i> +91 9958581183</p>
+                <p class="mb-1 text-muted">
+                    <i class="me-lg-2 text-white fa-solid fa-envelope"></i>
+                    mihsratravels01@gmail.com
+                </p>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="d-flex justify-content-lg-between justify-content-center flex-wrap small">
+            <div>
+                <p class="text-white text-center">Copyright <i class="fa-regular fa-copyright"></i> 2025 - Mishra
+                    Travels and Cargo
+                    Movers by Standup Startups Pvt. Ltd.</p>
+            </div>
+            <div>
+                <p class="text-white"> <span class="pointer">Terms of Use</span> | <span class="pointer">Privacy
+                        Policy</span> </p>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------End Footer-------------------------------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#splide', {
+                type: 'loop',
+                perPage: 1,
+                autoplay: true,
+            }).mount();
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#splide_1', {
+                type: 'loop',
+                perPage: 3,
+                autoplay: true,
+                breakpoints: {
+                    768: {
+                        perPage: 1,
+                    },
+                },
+            }).mount();
+        });
+
+    </script>
+</body>
+
+</html>

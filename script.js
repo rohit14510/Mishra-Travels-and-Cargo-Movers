@@ -64,3 +64,65 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+
+
+// view seats
+// Select all buttons in the group
+const buttons = document.querySelectorAll('.btn-group .btn');
+
+// Add click event listener to each button
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        // Remove 'active' class from all buttons
+        buttons.forEach((btn) => btn.classList.remove('active'));
+        
+        // Add 'active' class to the clicked button
+        button.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.seat.available').forEach(seat => {
+    seat.addEventListener('click', () => {
+        seat.classList.toggle('selected');
+        updateFareDetails();
+    });
+});
+
+function updateFareDetails() {
+    const selectedSeats = document.querySelectorAll('.seat.selected').length;
+    const ticketFare = selectedSeats * 799; // Example fare
+    document.getElementById('selected-seats').textContent = selectedSeats;
+    document.getElementById('ticket-fare').textContent = ticketFare;
+}
+
+// View Seat Btn
+
+const viewSeatsBtn = document.getElementById('viewSeatsBtn');
+const seatsContainer = document.getElementById('seatsContainer');
+const hideSeatsBtn = document.getElementById('hideSeatsBtn');
+
+// Show the seats container when 'View Seats' is clicked
+viewSeatsBtn.addEventListener('click', () => {
+    seatsContainer.style.display = 'block';
+});
+
+// Hide the seats container when cross icon is clicked
+hideSeatsBtn.addEventListener('click', () => {
+    seatsContainer.style.display = 'none';
+});
+
+
+// All Details Btn
+const AllDetailsBtn = document.getElementById('All_Details_Btn');
+const AllDetails = document.getElementById('All_Details');
+const HideDetailsCrossBtn = document.getElementById('Details_Hide-Btn');
+
+// Show the details container with animation
+AllDetailsBtn.addEventListener('click', () => {
+    AllDetails.classList.add('show');
+});
+
+// Hide the details container with animation
+HideDetailsCrossBtn.addEventListener('click', () => {
+    AllDetails.classList.remove('show');
+});
