@@ -75,17 +75,25 @@
             <div class="row g-3">
                 <div class="col-md-3">
                     <label for="origin" class="form-label">Origin</label>
-                    <select id="origin" class="form-select">
-                        <option selected>Jaipur</option>
+                    <input list="origin-options" id="origin" class="form-control" placeholder="Select or type origin">
+                    <datalist id="origin-options">
+                        <option value="Jaipur"></option>
+                        <option value="Mumbai"></option>
+                        <option value="Kolkata"></option>
+                        <option value="Bangalore"></option>
                         <!-- Add more options -->
-                    </select>
+                    </datalist>
                 </div>
                 <div class="col-md-3">
                     <label for="destination" class="form-label">Destination</label>
-                    <select id="destination" class="form-select">
-                        <option selected>Delhi</option>
+                    <input list="destination-options" id="destination" class="form-control" placeholder="Select or type destination">
+                    <datalist  id="destination-options">
+                        <option value="Delhi"></option>
+                        <option value="Chennai"></option>
+                        <option value="Pune"></option>
+                        <option value="Hyderabad"></option>
                         <!-- Add more options -->
-                    </select>
+                    </datalist>
                 </div>
                 <div class="col-md-2">
                     <label for="onward-date" class="form-label">Onward Date</label>
@@ -100,39 +108,95 @@
                 </div>
             </div>
         </div>
+        
         <!-- Filter Section -->
-        <div class="d-lg-block d-none">
-            <div class="d-flex justify-content-center align-items-center mt-4 ">
-                <button class="btn btn-light"><i class="fa-solid fa-less-than"></i></button>
-                <div class="d-flex">
+        <div class="d-lg-block d-none mt-4">
+            <div id="date-slider" class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
                     <button class="btn btn-light">Sat 04-Jan</button>
+                  </li>
+                  <li class="splide__slide">
                     <button class="btn btn-light">Sun 05-Jan</button>
+                  </li>
+                  <li class="splide__slide">
                     <button class="btn btn-light">Mon 06-Jan</button>
+                  </li>
+                  <li class="splide__slide">
                     <button class="btn btn-light">Tue 07-Jan</button>
+                  </li>
+                  <li class="splide__slide">
                     <button class="btn btn-light">Wed 08-Jan</button>
+                  </li>
+                  <li class="splide__slide">
                     <button class="btn btn-light">Thu 09-Jan</button>
+                  </li>
+                  <li class="splide__slide">
                     <button class="btn btn-light">Fri 10-Jan</button>
-                </div>
-                <button class="btn btn-light"><i class="fa-solid fa-greater-than"></i></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <i class="fa-solid fa-less-than"></i>
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <i class="fa-solid fa-greater-than"></i>
+                </button>
+              </div>
             </div>
-        </div>
+          </div>
+          
         <hr>
         <!-- Time Range -->
         <div class="row">
             <div class="col-lg-6">
-                <div class="row">
+                <div class="row px-2">
                     <div class="col-4">
-
+                      <div class="slider-container">
+                        <p class="text-center text-muted mb-1 small">Depart</p>
+                        <div class="slider" id="slider-depart">
+                          <div class="slider-range" id="slider-range-depart"></div>
+                          <div class="slider-thumb" id="thumb-left-depart"></div>
+                          <div class="slider-thumb" id="thumb-right-depart"></div>
+                          <div class="slider-mark" style="left: 10%">00:00</div>
+                          <div class="slider-mark" style="left: 90%">24:00</div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-4"></div>
-                    <div class="col-4"></div>
-                </div>
+                    <div class="col-4">
+                      <div class="slider-container">
+                        <p class="text-center text-muted mb-1 small">Arrival</p>
+                        <div class="slider" id="slider-arrival">
+                          <div class="slider-range" id="slider-range-arrival"></div>
+                          <div class="slider-thumb" id="thumb-left-arrival"></div>
+                          <div class="slider-thumb" id="thumb-right-arrival"></div>
+                          <div class="slider-mark" style="left: 10%">00:00</div>
+                          <div class="slider-mark" style="left: 90%">24:00</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="slider-container">
+                        <p class="text-center text-muted mb-1 small">Fare</p>
+                        <div class="slider" id="slider-fare">
+                          <div class="slider-range" id="slider-range-fare"></div>
+                          <div class="slider-thumb" id="thumb-left-fare"></div>
+                          <div class="slider-thumb" id="thumb-right-fare"></div>
+                          <div class="slider-mark" style="left: 10%">00:00</div>
+                          <div class="slider-mark" style="left: 90%">24:00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-4 mt-lg-0">
                 <div class="row p-2">
                     <div class="col-4 p-0">
                         <select class="form-select">
-                            <option value="" hidden>Bus Type</option>
+                            <option  value="" hidden>Bus Type</option>
                             <option >Ac</option>
                             <option >Non Ac</option>
                         </select>
@@ -312,12 +376,12 @@
                             <!-- Seat Layout -->
                             <div class="col-6">
                                 <div class="row">
-                                    <div class="col-6">
-                                        <div class="row justify-content-end">
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex justify-content-end ">
                                             <div class="single_seat available">1</div>
-                                            <div class="single_seat available">2</div>
+                                            <div class="single_seat available">2</div> 
                                         </div>
-                                        <div class="row justify-content-end">
+                                        <div class="d-flex justify-content-end">
                                             <div class="single_seat available">3</div>
                                             <div class="single_seat available">4</div>
                                         </div>
@@ -328,12 +392,12 @@
                                             <div class="double_seat available">L</div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="row justify-content-end">
+                                    <div class="col-6 p-0">
+                                        <div class="d-flex justify-content-end">
                                             <div class="single_seat available">5</div>
                                             <div class="single_seat available">6</div>
                                         </div>
-                                        <div class="row justify-content-end">
+                                        <div class="d-flex justify-content-end">
                                             <div class="single_seat available">7</div>
                                             <div class="single_seat available">8</div>
                                         </div>
@@ -408,7 +472,7 @@
             </div>
 
 
-            <div class="col-md-6">
+            <div class="col-md-6 mt-4 mt-lg-0">
              <div class="row">
                 <div class="col-lg-6">
                     <div>
@@ -569,11 +633,11 @@
                 <div class="d-flex align-items-center gap-2">
                     <input class="d-block" type="radio" name="payment" value="upi">
                     <p class="m-0">UPI</p>
-                    <img src="assets/gpay.png" width="50px" alt="">
-                    <img src="assets/bhim.jpeg" width="80px" alt="">
-                    <img src="assets/phonepay.png" width="80px" alt="">
+                    <img src="assets/gpay.png" width="30px" alt="">
+                    <img src="assets/bhim.jpeg" width="30px" alt="">
+                    <img src="assets/phonepay.png" width="30px" alt="">
                     <img src="assets/whatsapp.jpeg" width="30px" alt="">
-                    <img src="assets/paytm.png" width="50px" alt="">
+                    <img src="assets/paytm.png" width="30px" alt="">
               </div>
 
               </div>
@@ -688,28 +752,24 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#splide', {
-                type: 'loop',
-                perPage: 1,
-                autoplay: true,
-            }).mount();
+          new Splide('#date-slider', {
+            type: 'loop',
+            perPage: 7, // Number of slides visible at a time
+            perMove: 1, // Move one slide at a time
+            arrows: true, // Enable arrows
+            pagination: false, // Disable pagination
+            breakpoints: {
+              768: {
+                perPage: 2, // Adjust for smaller screens
+              },
+              480: {
+                perPage: 1, // Adjust for very small screens
+              },
+            },
+          }).mount();
         });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#splide_1', {
-                type: 'loop',
-                perPage: 3,
-                autoplay: true,
-                breakpoints: {
-                    768: {
-                        perPage: 1,
-                    },
-                },
-            }).mount();
-        });
-
-    </script>
+      </script>
+      
 </body>
 
 </html>

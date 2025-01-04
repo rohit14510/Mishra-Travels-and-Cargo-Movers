@@ -549,19 +549,7 @@ input[type="radio"] {
   border-radius: 0%;
   padding:10px 30px;
 }
-.range-slider {
-  position: relative;
-  height: 6px;
-  border-radius: 3px;
-  overflow: hidden;
-}
 
-.range-track {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #ffc0cb;
-}
 
 .btn-pink {
   background-color: #E1007D;
@@ -607,7 +595,45 @@ input[type="radio"] {
   color: #555;
 }
 /* --------------------------Range--------------------------------- */
+.slider-container {
+  width: 100%;
+  margin: auto;
+}
 
+.slider {
+  position: relative;
+  height: 6px;
+  background: #e4e4e4;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.slider-range {
+  position: absolute;
+  height: 100%;
+  background: #DD2476;
+  border-radius: 3px;
+}
+
+.slider-thumb {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #DD2476;
+  border-radius: 50%;
+  border: 2px solid white;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+}
+
+.slider-mark {
+  position: absolute;
+  top: 10px;
+  color: #666;
+  font-size: 12px;
+  transform: translateX(-50%);
+}
 
 /* ------------------View Seats--------------------------------- */
 .View_Seat_Cross{
@@ -633,7 +659,7 @@ input[type="radio"] {
 }
 
 .double_seat {
-  width: 25px;
+  width: 20px;
   height: 45px;
   margin: 3px;
   display: flex;
@@ -691,19 +717,19 @@ input[type="radio"] {
 }
 .radio-buttons {
   display: flex;
-  gap: 20px; /* Adjust the gap between radio buttons */
+  gap: 20px; 
 }
 
 .radio-buttons label {
   display: flex;
   align-items: center;
-  font-size: 16px; /* Adjust the font size */
+  font-size: 16px; 
   cursor: pointer;
 }
 
 .radio-buttons input[type="radio"] {
   display: block;
-  margin-right: 8px; /* Space between radio button and label */
+  margin-right: 8px; 
   background-color: #28a745;
 }
 
@@ -715,7 +741,7 @@ input[type="radio"] {
   height: 100%;
   background-color: #f0f0f0;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: right 0.5s ease; /* Smooth transition */
+  transition: right 0.5s ease;
   z-index: 2000;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -723,7 +749,7 @@ input[type="radio"] {
 
 #All_Details.show {
   top: 0%;
-  right: 0; /* Move into view */
+  right: 0; 
 }
 
 .hidden {

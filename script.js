@@ -49,7 +49,7 @@ const modal = document.getElementById("loginModal");
 const closeModal = document.querySelector(".close");
 
 loginBtn.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
+    e.preventDefault(); 
     modal.style.display = "flex";
 });
 
@@ -67,10 +67,7 @@ window.addEventListener("click", (e) => {
 
 
 // view seats
-// Select all buttons in the group
 const buttons = document.querySelectorAll('.btn-group .btn');
-
-// Add click event listener to each button
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         // Remove 'active' class from all buttons
@@ -95,8 +92,9 @@ function updateFareDetails() {
     document.getElementById('ticket-fare').textContent = ticketFare;
 }
 
-// View Seat Btn
 
+
+// View Seat Btn
 const viewSeatsBtn = document.getElementById('viewSeatsBtn');
 const seatsContainer = document.getElementById('seatsContainer');
 const hideSeatsBtn = document.getElementById('hideSeatsBtn');
@@ -110,6 +108,8 @@ viewSeatsBtn.addEventListener('click', () => {
 hideSeatsBtn.addEventListener('click', () => {
     seatsContainer.style.display = 'none';
 });
+
+
 
 
 // All Details Btn
@@ -126,3 +126,70 @@ AllDetailsBtn.addEventListener('click', () => {
 HideDetailsCrossBtn.addEventListener('click', () => {
     AllDetails.classList.remove('show');
 });
+
+
+// Range
+const initializeSlider = (sliderId, rangeId, leftThumbId, rightThumbId) => {
+    const slider = document.getElementById(sliderId);
+    const range = document.getElementById(rangeId);
+    const thumbLeft = document.getElementById(leftThumbId);
+    const thumbRight = document.getElementById(rightThumbId);
+  
+    let leftValue = 20; // Initial left thumb value (in %)
+    let rightValue = 80; // Initial right thumb value (in %)
+  
+    const updateSlider = () => {
+      thumbLeft.style.left = `${leftValue}%`;
+      thumbRight.style.left = `${rightValue}%`;
+      range.style.left = `${leftValue}%`;
+      range.style.width = `${rightValue - leftValue}%`;
+    };
+  
+    const handleDrag = (thumb, event) => {
+      const sliderRect = slider.getBoundingClientRect();
+      const isLeft = thumb === thumbLeft;
+      const x = event.clientX || event.touches[0].clientX; // Use touch event clientX on mobile
+      const percent = Math.max(0, Math.min(100, (x - sliderRect.left) / sliderRect.width * 100));
+  
+      if (isLeft) {
+        leftValue = Math.min(percent, rightValue - 5); // Minimum gap of 5%
+      } else {
+        rightValue = Math.max(percent, leftValue + 5); // Minimum gap of 5%
+      }
+  
+      updateSlider();
+    };
+  
+    const addDragEvents = (thumb) => {
+      const onMove = (event) => handleDrag(thumb, event);
+      const onEnd = () => {
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onEnd);
+        document.removeEventListener('touchmove', onMove);
+        document.removeEventListener('touchend', onEnd);
+      };
+  
+      // Mouse events
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onEnd);
+  
+      // Touch events for mobile
+      document.addEventListener('touchmove', onMove);
+      document.addEventListener('touchend', onEnd);
+    };
+  
+    // Mouse down or touch start events
+    thumbLeft.addEventListener('mousedown', () => addDragEvents(thumbLeft));
+    thumbLeft.addEventListener('touchstart', () => addDragEvents(thumbLeft));
+    
+    thumbRight.addEventListener('mousedown', () => addDragEvents(thumbRight));
+    thumbRight.addEventListener('touchstart', () => addDragEvents(thumbRight));
+  
+    updateSlider(); // Initialize the slider positions
+  };
+  
+  // Initialize all sliders
+  initializeSlider('slider-depart', 'slider-range-depart', 'thumb-left-depart', 'thumb-right-depart');
+  initializeSlider('slider-arrival', 'slider-range-arrival', 'thumb-left-arrival', 'thumb-right-arrival');
+  initializeSlider('slider-fare', 'slider-range-fare', 'thumb-left-fare', 'thumb-right-fare');
+    
