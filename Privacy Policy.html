@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mishra Travel and Cargo Movers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- --------------------------------------------Header----------------------------------------------------- -->
+    <header class="sticky-top shadow">
+        <div class="logo">
+            <a href="index.html"> <img src="assets/logo.png" width="15%" alt=""></a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <!-- <li><a href="#service">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li> -->
+                <li><a href="Contact.html">Contact</a></li>
+                <li class="bg-danger px-3 py-2 text-white"><a class="text-white" href="#loginModal"
+                        id="login-btn">Login</a></li>
+
+
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <span>&#9776;</span>
+        </div>
+    </header>
+    <!-- Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="form-container">
+                <input type="radio" name="formToggle" id="login" checked>
+                <input type="radio" name="formToggle" id="signup">
+                <div class="form-header">
+                    <label for="login">Login</label>
+                    <label for="signup">Sign Up</label>
+                </div>
+                <div class="form-body">
+                    <!-- Login Form -->
+                    <form id="loginForm">
+                        <h3 class="">Login</h3>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button class="modalbtn" type="submit">Login</button>
+                    </form>
+                    <!-- Signup Form -->
+                    <form id="signupForm">
+                        <h3>Sign Up</h3>
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <button class="modalbtn" type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------------------Start Section Terms and Conditions----------------------------------------- -->
+    <div class="container-fluid p-4">
+        <h1 class="text-center fw-bold">Privacy Policy</h1>
+        <h3 class="fw-bold">Privacy Policy</h3>
+        <p class="text-muted small">Mishra Travels and cargo Movers is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our services.</p>
+        <h5 class="fw-bold">Information We Collect</h5>
+        <ul>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Personal Information:</span> We may collect personal information such as your name, email address, phone number, and payment information when you book a bus or contact us.</p>
+            </li>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Usage Data: </span>We collect information on how you interact with our website, including your IP address, browser type, and access times.</p>
+            </li>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Cookies: </span>We use cookies and similar technologies to enhance your experience on our website.</p>
+            </li>
+        </ul>
+        <h5 class="fw-bold">How We Use Your Information</h5>
+        <ul>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">To Provide Services: </span>To process your bookings, manage your reservations, and provide customer support.</p>
+            </li>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Communication: </span> To send you booking confirmations, updates, and promotional offers.</p>
+            </li>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Improvement: </span>To improve our services, website functionality, and user experience.</p>
+            </li>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Security: </span> To protect against fraud and ensure the security of our services.</p>
+            </li>
+        </ul>
+        <h5 class="fw-bold"> Information Sharing and Disclosure</h5>
+        <ul>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Service Providers:</span> We may share your information with third-party service providers who assist us in providing our services..</p>
+            </li>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Legal Requirements: </span> We may disclose your information if required by law or in response to legal processes.</p>
+            </li>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Business Transfers: </span>  In the event of a merger, acquisition, or sale of assets, your information may be transferred.</p>
+            </li>
+        </ul>
+        <h5 class="fw-bold">Security of Your Information</h5>
+        <p class="text-muted small">We use administrative, technical, and physical security measures to protect your personal information. However, no method of transmission over the internet or method of electronic storage is 100% secure.</p>
+        <h5 class="fw-bold">Your Privacy Rights</h5>
+        <ul>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Access and Correction: </span>You can access and update your personal information by contacting us.</p>
+            </li>
+            <li>
+                <p class="text-muted small"><span class="fw-bold">Opt-Out:</span> We grant you a limited,
+                    You can opt out of receiving promotional communications from us by following the unsubscribe instructions in those communications.
+                </p>
+            </li>
+        </ul>
+     
+        <h5 class="fw-bold">Changes to This Privacy Policy</h5>
+        <p class="text-muted small">We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on our website with the effective date.</p>
+        <h5 class="fw-bold">Contact Us</h5>
+        <p class="text-muted small">If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+    
+
+    </div>
+
+    <!-- -------------------------------------------------------------------------Start Footer-------------------------------------------------------------- -->
+    <div class="container-fluid p-4" style="background-color: #201C30;">
+        <div class="row justify-content-center text-center text-lg-start">
+            <div class="col-lg-4">
+                <img src="assets/logo.png" width="20%" alt="">
+                <p class="text-muted mt-2">Mishra Travels and Cargo Movers offers reliable and affordable transportation
+                    solutions.Trust us for safe, timely, and hassle-free journeys every time.</p>
+
+                <p class="bg-danger text-white py-2 px-4 d-inline-flex fw-bold rounded">+91-9958580360</p>
+            </div>
+            <div class="col-lg-4 text-white ">
+                <div>
+                    <h4 class="fw-bold">Company</h4>
+                    <ul class="list-unstyled fw-bold  Footer_link">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-white">
+                <h4 class="fw-bold">Get in Touch</h4>
+                <p class="mb-1 text-muted">
+                    <i class="me-lg-2 text-white fa-solid fa-location-dot"></i> Surajpur Road Bidhuna Auraiya, Uttar
+                    Pradesh – 206243
+                </p>
+                <p class="mb-1 text-muted"><i class="me-lg-2 text-white fa-solid fa-phone"></i> +91 9958581183</p>
+                <p class="mb-1 text-muted">
+                    <i class="me-lg-2 text-white fa-solid fa-envelope"></i>
+                    mihsratravels01@gmail.com
+                </p>
+            </div>
+        </div>
+        <hr class="text-white">
+        <div class="d-flex justify-content-lg-between justify-content-center flex-wrap small">
+            <div>
+                <p class="text-white text-center ">Copyright <i class="fa-regular fa-copyright"></i> 2025 - Mishra
+                    Travels and Cargo
+                    Movers by Standup Startups Pvt. Ltd.</p>
+            </div>
+            <div>
+                <p class="text-white"> <a href="Terms & Condition.html" class="pointer text-white" style="text-decoration: none;">Terms & Conditions</a> | <a href="Privacy Policy.html" class="pointer text-white"style="text-decoration: none;">Privacy Policy</a>  </p>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------End Footer-------------------------------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</body>
+
+</html>
