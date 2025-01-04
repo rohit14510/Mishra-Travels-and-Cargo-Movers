@@ -90,6 +90,44 @@ header {
     }
 }
 /* ----------------------------------------------end   Header---------------------------------------------------------- */
+/* -----------------Call And Whatsapp Button--------------------- */
+.quick_contact a {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  right: 18px;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+  transition: transform 0.5s ease;
+}
+.qwhtsapp {
+  bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #25d366;
+}
+.qcall {
+  bottom: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2196f3;
+}
+.quick_contact_icon {
+ 
+}
+.quick_contact a:hover {
+  transform: scale(1.1);
+}
+
+.my-float{
+	margin-top:16px;
+}
 /* ------------------------------------------------Start Hero Section------------------------------------------------------- */
 .Hero_section{
     background-image: url('assets/hero.jpg');
