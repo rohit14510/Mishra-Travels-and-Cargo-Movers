@@ -6,6 +6,47 @@ menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+// splide slider
+
+document.addEventListener('DOMContentLoaded', function () {
+new Splide('#Latest_offers_Slider', {
+type: 'loop',
+perPage: 3, 
+autoplay: true,
+breakpoints: {
+    768: { 
+        perPage: 1, 
+    },
+},
+}).mount();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#Testimonials_splide', {
+        type: 'loop',
+        perPage: 1,
+        autoplay: true,
+    }).mount();
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#date-slider', {
+    type: 'loop',
+    perPage: 7, // Number of slides visible at a time
+    perMove: 1, // Move one slide at a time
+    arrows: true, // Enable arrows
+    pagination: false, // Disable pagination
+    breakpoints: {
+      768: {
+        perPage: 2, // Adjust for smaller screens
+      },
+      480: {
+        perPage: 1, // Adjust for very small screens
+      },
+    },
+  }).mount();
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {

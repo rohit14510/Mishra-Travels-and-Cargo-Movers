@@ -762,27 +762,6 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          new Splide('#date-slider', {
-            type: 'loop',
-            perPage: 7, // Number of slides visible at a time
-            perMove: 1, // Move one slide at a time
-            arrows: true, // Enable arrows
-            pagination: false, // Disable pagination
-            breakpoints: {
-              768: {
-                perPage: 2, // Adjust for smaller screens
-              },
-              480: {
-                perPage: 1, // Adjust for very small screens
-              },
-            },
-          }).mount();
-        });
-      </script>
-      
 </body>
 
 </html>
