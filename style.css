@@ -89,6 +89,12 @@ header {
         margin: 0 45px;
     }
 }
+.user_profile{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-size: cover;
+}
 /* ----------------------------------------------end   Header---------------------------------------------------------- */
 /* -----------------Call And Whatsapp Button--------------------- */
 .quick_contact a {
@@ -792,4 +798,49 @@ input[type="radio"] {
 
 .hidden {
   display: none;
+}
+
+/* --------User Profile Container------------ */
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5722;
+  border-radius: 50%;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn {
+  background-color: #DC3545;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #DC3545;
+  color: white;
 }

@@ -15,34 +15,32 @@
 </head>
 
 <body>
-     <!-- --------------------------------------------Header----------------------------------------------------- -->
-     <header class="sticky-top shadow">
+    <!-- --------------------------------------------Header----------------------------------------------------- -->
+    <header class="sticky-top shadow">
         <div class="logo">
             <a href="index.html"> <img src="assets/logo.png" width="15%" alt=""></a>
         </div>
         <nav class="nav-links">
-            <ul>
+            <ul class="d-lg-flex d-block align-items-center">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
-                <!-- <li><a href="#service">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li> -->
                 <li><a href="Contact.html">Contact</a></li>
-                <li class="bg-danger px-3 py-2 text-white"><a class="text-white" href="#loginModal" id="login-btn">Login</a></li>
-
-
+                <li class="bg-danger px-3 py-2 text-white "><a class="text-white" href="#loginModal" id="login-btn">Login</a></li>
+                <li><a href="UserProfile.html"><img class="user_profile" src="assets/who_1.jpg" alt="User Profile"></a></li>
             </ul>
         </nav>
         <div class="menu-icon">
             <span>&#9776;</span>
         </div>
     </header>
+    
 <!-- Modal -->
-<div id="loginModal" class="modal">
+<div id="loginModal" class="modal">   
     <div class="modal-content">
         <span class="close">&times;</span>
         <div class="form-container">
-            <input type="radio" name="formToggle" id="login" checked>
-            <input type="radio" name="formToggle" id="signup">
+            <input class="modal_input" type="radio" name="formToggle" id="login" checked>
+            <input class="modal_input" type="radio" name="formToggle" id="signup">
             <div class="form-header">
                 <label for="login">Login</label>
                 <label for="signup">Sign Up</label>
@@ -51,16 +49,19 @@
                 <!-- Login Form -->
                 <form id="loginForm">
                     <h3 class="">Login</h3>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
+                    <input class="modal_input" type="email" placeholder="Email" required>
+                    <input class="modal_input" type="password" placeholder="Password" required>
                     <button class="modalbtn" type="submit">Login</button>
+                    <p ><a class="text-muted" href="">Forgot password</a></p>
                 </form>
                 <!-- Signup Form -->
                 <form id="signupForm">
                     <h3>Sign Up</h3>
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
+                    <input class="modal_input" type="text" placeholder="First Name" required>
+                    <input class="modal_input" type="text" placeholder="Last Name" required>
+                    <input class="modal_input" type="text" placeholder="Mobile No" required>
+                    <input class="modal_input" type="email" placeholder="Email" required>
+                    <input class="modal_input" type="password" placeholder="Password" required>
                     <button class="modalbtn" type="submit">Sign Up</button>
                 </form>
             </div>

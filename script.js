@@ -234,3 +234,13 @@ const initializeSlider = (sliderId, rangeId, leftThumbId, rightThumbId) => {
   initializeSlider('slider-arrival', 'slider-range-arrival', 'thumb-left-arrival', 'thumb-right-arrival');
   initializeSlider('slider-fare', 'slider-range-fare', 'thumb-left-fare', 'thumb-right-fare');
     
+
+  // Profile Page
+  function updateProfile() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const location = document.getElementById('location').value;
+
+    document.getElementById('displayName').textContent = `${firstName} ${lastName}`;
+    document.getElementById('displayLocation').textContent = location;
+}
