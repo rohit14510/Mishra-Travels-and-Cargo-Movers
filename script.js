@@ -5,7 +5,28 @@ const navLinks = document.querySelector('.nav-links');
 menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+// Profile
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".sidebar a");
+    const sections = document.querySelectorAll(".content-section");
 
+    links.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Remove 'active' class from all links and sections
+            links.forEach(l => l.classList.remove("active"));
+            sections.forEach(section => section.classList.remove("active"));
+            console.log("click")
+
+            // Add 'active' class to the clicked link and corresponding section
+            this.classList.add("active");
+            const targetId = this.getAttribute("data-target");
+            document.getElementById(targetId).classList.add("active");
+           
+        });
+    });
+});
 // splide slider
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -105,6 +126,125 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+
+// login page modal
+document.addEventListener("DOMContentLoaded", () => {
+    const loginModal = document.getElementById("loginModal");
+    const loginRadio = document.getElementById("login");
+    const signupRadio = document.getElementById("signup");
+    const mobileNumberInput = document.getElementById("mobileNumber");
+    const otpInput = document.getElementById("otpInput");
+    const sendOtpBtn = document.getElementById("sendOtpBtn");
+    const verifyOtpBtn = document.getElementById("verifyOtpBtn");
+    const resendOtpBtn = document.getElementById("resendOtpBtn");
+    const closeModal = document.querySelector(".close");
+    let resendTimer;
+  
+    const resetLoginForm = () => {
+      mobileNumberInput.disabled = false;
+      mobileNumberInput.value = "";
+      otpInput.style.display = "none";
+      otpInput.value = "";
+      sendOtpBtn.style.display = "block";
+      verifyOtpBtn.style.display = "none";
+      resendOtpBtn.style.display = "none";
+      clearInterval(resendTimer);
+    };
+  
+    const switchToLogin = () => {
+      loginRadio.checked = true;
+      resetLoginForm();
+    };
+  
+    // Reset to Login when switching form headers
+    loginRadio.addEventListener("change", resetLoginForm);
+  
+    // Reset Modal on close
+    closeModal.addEventListener("click", () => {
+      loginModal.style.display = "none";
+      switchToLogin(); // Reset to default login view
+    });
+  
+    // Reset Modal when reopened
+    loginModal.addEventListener("click", (event) => {
+      if (event.target === loginModal) {
+        loginModal.style.display = "none";
+        switchToLogin();
+      }
+    });
+  
+    sendOtpBtn.addEventListener("click", () => {
+      const mobileNumber = mobileNumberInput.value.trim();
+  
+      // Validate mobile number
+      if (/^[0-9]{10}$/.test(mobileNumber)) {
+        console.log(`Sending OTP to ${mobileNumber}`);
+        alert("OTP sent successfully!");
+  
+        // Disable number input, show OTP fields
+        mobileNumberInput.disabled = true;
+        otpInput.style.display = "block";
+        sendOtpBtn.style.display = "none";
+        verifyOtpBtn.style.display = "block";
+        resendOtpBtn.style.display = "block";
+  
+        // Start resend OTP timer
+        let timeLeft = 30;
+        resendOtpBtn.disabled = true;
+        resendOtpBtn.textContent = `Resend OTP (${timeLeft}s)`;
+  
+        resendTimer = setInterval(() => {
+          timeLeft--;
+          resendOtpBtn.textContent = `Resend OTP (${timeLeft}s)`;
+          if (timeLeft <= 0) {
+            clearInterval(resendTimer);
+            resendOtpBtn.disabled = false;
+            resendOtpBtn.textContent = "Resend OTP";
+          }
+        }, 1000);
+      } else {
+        alert("Please enter a valid 10-digit mobile number.");
+      }
+    });
+  
+    verifyOtpBtn.addEventListener("click", () => {
+      const otp = otpInput.value.trim();
+  
+      if (/^[0-9]{6}$/.test(otp)) {
+        console.log(`Verifying OTP: ${otp}`);
+        alert("Login successful!");
+      } else {
+        alert("Please enter a valid 6-digit OTP.");
+      }
+    });
+  
+    resendOtpBtn.addEventListener("click", () => {
+      const mobileNumber = mobileNumberInput.value.trim();
+      console.log(`Resending OTP to ${mobileNumber}`);
+      alert("OTP resent successfully!");
+  
+      // Restart resend OTP timer
+      let timeLeft = 30;
+      resendOtpBtn.disabled = true;
+      resendOtpBtn.textContent = `Resend OTP (${timeLeft}s)`;
+  
+      resendTimer = setInterval(() => {
+        timeLeft--;
+        resendOtpBtn.textContent = `Resend OTP (${timeLeft}s)`;
+        if (timeLeft <= 0) {
+          clearInterval(resendTimer);
+          resendOtpBtn.disabled = false;
+          resendOtpBtn.textContent = "Resend OTP";
+        }
+      }, 1000);
+    });
+  });
+  
+  
+  
+  
+
+
 
 
 // view seats
@@ -244,3 +384,5 @@ const initializeSlider = (sliderId, rangeId, leftThumbId, rightThumbId) => {
     document.getElementById('displayName').textContent = `${firstName} ${lastName}`;
     document.getElementById('displayLocation').textContent = location;
 }
+
+

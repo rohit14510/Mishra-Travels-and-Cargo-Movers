@@ -28,8 +28,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li class="bg-danger px-3 py-2 text-white "><a class="text-white" href="#loginModal" id="login-btn">Login</a></li>
-                <li><a href="UserProfile.html"><img class="user_profile" src="assets/who_1.jpg" alt="User Profile"></a></li>
+                <li ><a  href="#loginModal" id="login-btn">Login</a></li>
+                <li><a href="UserProfile.html"><i class="fa-solid fa-user fs-3"></i></a></li>
             </ul>
         </nav>
         <div class="menu-icon">
@@ -44,19 +44,61 @@
         <div class="form-container">
             <input class="modal_input" type="radio" name="formToggle" id="login" checked>
             <input class="modal_input" type="radio" name="formToggle" id="signup">
-            <div class="form-header">
-                <label for="login">Login</label>
-                <label for="signup">Sign Up</label>
-            </div>
+           
             <div class="form-body">
                 <!-- Login Form -->
                 <form id="loginForm">
-                    <h3 class="">Login</h3>
-                    <input class="modal_input" type="email" placeholder="Email" required>
-                    <input class="modal_input" type="password" placeholder="Password" required>
-                    <button class="modalbtn" type="submit">Login</button>
-                    <p ><a class="text-muted" href="">Forgot password</a></p>
-                </form>
+                    <h3>Login</h3>
+                    <!-- Mobile Number Input -->
+                    <input
+                      class="modal_input"
+                      type="tel"
+                      placeholder="Enter Mobile Number"
+                      pattern="[0-9]{10}"
+                      required
+                      id="mobileNumber"
+                    />
+                  
+                    <!-- OTP Input (Initially hidden) -->
+                    <input
+                      class="modal_input"
+                      type="text"
+                      placeholder="Enter OTP"
+                      maxlength="6"
+                      required
+                      id="otpInput"
+                      style="display: none;"
+                    />
+                  
+                    <!-- Buttons -->
+                    <button class="modalbtn" type="button" id="sendOtpBtn">
+                      Send OTP
+                    </button>
+                    <button
+                      class="modalbtn"
+                      type="button"
+                      id="verifyOtpBtn"
+                      style="display: none;"
+                    >
+                      Verify OTP
+                    </button>
+                    <button
+                      class="modalbtn"
+                      type="button"
+                      id="resendOtpBtn"
+                      style="display: none;"
+                      disabled
+                    >
+                      Resend OTP (30s)
+                    </button>
+                  
+                    <p>
+                      <a class="text-muted" href="#">Need Help?</a>
+                    </p>
+                  </form>
+                  
+                  
+                  
                 <!-- Signup Form -->
                 <form id="signupForm">
                     <h3>Sign Up</h3>
@@ -86,7 +128,109 @@
     </a>
   </div>
 <!-- -----------User Profile Container---------------------- -->
-<div class="container">
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 sidebar py-2">
+            <a href="#" class="py-2 active" data-target="profile-section">My Profile</a>
+            <a href="#" class="py-2" data-target="booking-section">My Booking</a>
+            <a href="#" class="py-2" >Sign out</a>
+        </nav>
+
+        <!-- Content Sections -->
+        <main class="col-md-9 col-lg-10 py-4">
+           <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div id="profile-section" class="content-section active ">
+                    <div class="text-center">
+                       <h2>My Profile</h2>
+                      
+                    </div>
+                    <form class="row g-3 p-2">
+                       <!-- Gender Selection -->
+                       <div class="col-12">
+                           <label class="form-label">Gender</label><br>
+                           <div class="btn-group" role="group" aria-label="Gender selection">
+                               <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" value="Male" checked>
+                               <label class="btn btn-outline-secondary w-100" for="male">Male</label>
+                   
+                               <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" value="Female">
+                               <label class="btn btn-outline-secondary w-100" for="female">Female</label>
+                           </div>
+                       </div>
+                   
+                       <!-- First and Last Name -->
+                       <div class="col-md-6">
+                           <label for="firstName" class="form-label">First name</label>
+                           <input type="text" class="form-control" id="firstName" value="user">
+                       </div>
+                       <div class="col-md-6">
+                           <label for="lastName" class="form-label">Last name</label>
+                           <input type="text" class="form-control" id="lastName" value="Test">
+                       </div>
+                   
+                       <!-- Contact Details -->
+                       <div class="col-md-6">
+                           <label for="phone" class="form-label">Phone number</label>
+                           <div class="input-group">
+                               <span class="input-group-text">+91</span>
+                               <input type="text" class="form-control" id="phone" value="1234567890">
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <label for="email" class="form-label">Email</label>
+                           <input type="email" class="form-control" id="email" value="User.test@example.com">
+                       </div>
+                   
+                       <!-- Buttons -->
+                       <div class="col-12 d-flex justify-content-center">
+                           <button type="reset" class="btn btn-secondary me-2">Cancel</button>
+                           <button type="submit" class="btn btn-submit">Submit</button>
+                       </div>
+                   </form>
+                   
+                   </div>
+            </div>
+           </div>
+
+            <div id="booking-section" class="content-section">
+                <div class="container mt-5">
+                    <ul class="nav nav-tabs justify-content-start border-bottom-1">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#upcoming">Upcoming</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#past">Past</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#cancelled">Cancelled</a>
+                      </li>
+                    </ul>
+                
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="upcoming">
+                        <div class="alert-box">You have no upcoming bookings</div>
+                      </div>
+                      <div class="tab-pane fade" id="past">
+                        <div class="alert-box">You have no past bookings</div>
+                      </div>
+                      <div class="tab-pane fade" id="cancelled">
+                        <div class="alert-box">You have no cancelled bookings</div>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+
+            <!-- <div id="signout-section" class="content-section">
+                <h2>Sign Out</h2>
+                <p>Sign out confirmation or details go here.</p>
+            </div> -->
+        </main>
+    </div>
+</div>
+
+<!-- <div class="container">
     <div class="form-container">
         <div class="text-center mb-4">
             <div class="position-relative d-inline-block">
@@ -138,7 +282,7 @@
             </div>
         </form>
     </div>
-</div>
+</div> -->
 
  <!-- -----------User Profile Container---------------------- -->
  <!-- -------------------------------------------------------------------------Start Footer-------------------------------------------------------------- -->

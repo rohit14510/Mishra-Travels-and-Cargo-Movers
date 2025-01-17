@@ -1,95 +1,95 @@
 header {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding:10px 8px;
-    background-color: white;
-    color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 8px;
+  background-color: white;
+  color: black;
 }
 
 .logo h1 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .nav-links ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .nav-links ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 .nav-links ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: 600;
-    transition: .5s all;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.5s all;
 }
-.nav-links ul li a:hover{
-    color: red;
+.nav-links ul li a:hover {
+  color: red;
 }
 
 .menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-        z-index: 1000;
-    }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
 
-    .nav-links ul {
-        display: block;
-    }
+  .nav-links ul {
+    display: block;
+  }
 
-    .nav-links ul li {
-        margin: 10px 0;
-    }
+  .nav-links ul li {
+    margin: 10px 0;
+  }
 
-    .menu-icon {
-        display: block;
-        text-align: end;
-        color: black;
-    }
+  .menu-icon {
+    display: block;
+    text-align: end;
+    color: black;
+  }
 
-    .nav-links.active {
-        display: flex;
-    }
-    .nav-links ul li a{
-      color: black;
-    }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links ul li a {
+    color: black;
+  }
 }
 
 /* Desktop Styles */
 @media (min-width: 769px) {
-    .nav-links {
-        display: flex;
-    }
+  .nav-links {
+    display: flex;
+  }
 
-    .nav-links ul {
-        display: flex;
-        list-style: none;
-    }
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+  }
 
-    .nav-links ul li {
-        margin: 0 45px;
-    }
+  .nav-links ul li {
+    margin: 0 45px;
+  }
 }
-.user_profile{
+.user_profile {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -125,23 +125,22 @@ header {
   background-color: #2196f3;
 }
 .quick_contact_icon {
- 
 }
 .quick_contact a:hover {
   transform: scale(1.1);
 }
 
-.my-float{
-	margin-top:16px;
+.my-float {
+  margin-top: 16px;
 }
 /* ------------------------------------------------Start Hero Section------------------------------------------------------- */
-.Hero_section{
-    background-image: url('assets/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    position: relative;
+.Hero_section {
+  background-image: url("assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
 .Hero_section .overlay {
@@ -151,250 +150,242 @@ header {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: #FF512F; 
-  background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
-  background: linear-gradient(to left, #DD2476, #FF512F); 
+  background: #ff512f;
+  background: -webkit-linear-gradient(to left, #dd2476, #ff512f);
+  background: linear-gradient(to left, #dd2476, #ff512f);
   opacity: 0.8;
 }
 
 .Hero_section .row {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
 }
-.hero_tittle{
-    font-size: 4rem;
-    font-weight: 700;
+.hero_tittle {
+  font-size: 4rem;
+  font-weight: 700;
 }
-.hero_para{
-    font-size: 1.5rem;
+.hero_para {
+  font-size: 1.5rem;
 }
-.common_btn{
-    background-color: #FFAE02;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-weight: 600;
-    font-size: large;
+.common_btn {
+  background-color: #ffae02;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: large;
 }
-.hero_img{
-    width: auto;
-    height: 80vh;
-    
+.hero_img {
+  width: auto;
+  height: 80vh;
 }
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .hero_tittle{
-        font-size: 2rem;
-        font-weight: 700;
-      
-    }
-    .hero_para{
-        font-size: 1rem;
-    
-    }
-    .hero_img{
-        width: auto;
-        height: 40vh;
-        
-    }
- 
+  .hero_tittle {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .hero_para {
+    font-size: 1rem;
+  }
+  .hero_img {
+    width: auto;
+    height: 40vh;
+  }
 }
 /* ------------------------------------------------End Hero Section------------------------------------------------------- */
 /* ---------------------------------------------------Start online Booking------------------------------------------------- */
-.Contact_icon{
-    background-color: #FFAE02;
-    padding: 8px;
+.Contact_icon {
+  background-color: #ffae02;
+  padding: 8px;
 }
-.Contact_section{
-  background: #FF512F; 
-  background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
-  background: linear-gradient(to left, #DD2476, #FF512F); 
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Contact_section {
+  background: #ff512f;
+  background: -webkit-linear-gradient(to left, #dd2476, #ff512f);
+  background: linear-gradient(to left, #dd2476, #ff512f);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .booking-section {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-  
-  }
-  .booking-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  .btn-book {
-    background-color: #D72024;
-    border: 2px solid #D72024;
-    color: #fff;
-    font-weight: bold;
-    transition: .5s;
-  }
-  .btn-book:hover {
-    background-color: #fff;
-    color: #000;
-   border: 2px solid #D72024;
-  }
-  .form-select, .form-control {
-    border-color: #ddd;
-  }
-  .form-select:focus, .form-control:focus {
-    border-color: #ffc107;
-    box-shadow: none;
-  }
-  .form-group {
-    margin-bottom: 15px;
-  }
-  /* ----------------------about ------------------------------------ */
-  .counter_text{
-    font-size: 3rem;
-    color: #D72024;
-  }
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.booking-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.btn-book {
+  background-color: #d72024;
+  border: 2px solid #d72024;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.btn-book:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #d72024;
+}
+.form-select,
+.form-control {
+  border-color: #ddd;
+}
+.form-select:focus,
+.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: none;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+/* ----------------------about ------------------------------------ */
+.counter_text {
+  font-size: 3rem;
+  color: #d72024;
+}
 /* -----------------------------------------------------------------Start Project-------------------------------------- */
 .Project_Section {
-    background-image: url('assets/perimum.jpg'); /* Replace with your background image path */
-    background-attachment: fixed; /* Makes the background fixed */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    padding:80px 50px; /* Adds spacing above and below the content */
-    position: relative;
-  }
-  .Project_Section .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: #FF512F; 
-  background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
-  background: linear-gradient(to left, #DD2476, #FF512F); 
+  background-image: url("assets/perimum.jpg"); /* Replace with your background image path */
+  background-attachment: fixed; /* Makes the background fixed */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 80px 50px; /* Adds spacing above and below the content */
+  position: relative;
+}
+.Project_Section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #ff512f;
+  background: -webkit-linear-gradient(to left, #dd2476, #ff512f);
+  background: linear-gradient(to left, #dd2476, #ff512f);
   opacity: 0.8;
+}
+.Project_Section .row {
+  z-index: 3;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .Project_Section {
+    padding: 30px;
   }
-  .Project_Section .row {
-    z-index: 3;
-    position: relative;
-  }
-  @media (max-width: 768px) {
-    .Project_Section{
-      padding: 30px;
-    }
-  }
-
-  .ProjecrCard{
-    background-color: white;
-    padding: 10px;
-    border-radius: 20px;
-    margin-top: 20PX;
-  }
-  /* ------------------------------------------Service--------------------------------------------------- */
-  .Learn_More{
-    text-decoration: none;
-    color: #D72024;
-  }
-  .service_card{
-    background-color: #F4F4F4;
-    padding: 20px;
-    border: 15px solid white;
-   box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.15) ;
-  }
-
-  /* -----------------------------------------------Bus Choose------------------------------------------------- */
-  .Bus_Choose_card{
-    box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.15) ;
-  }
-  /* -----------------------------------------------------Choose Us------------------------------------------------ */
-
-  .Choose_Us_Section {
-    background-image: url('assets/choose_us.jpg'); /* Replace with your background image path */
-    background-attachment: fixed; /* Makes the background fixed */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    padding:80px 50px; /* Adds spacing above and below the content */
-    position: relative;
-  }
-  .Choose_Us_Section .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: #FF512F; 
-    background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
-    background: linear-gradient(to left, #DD2476, #FF512F); 
-    opacity: 0.8;
-  }
-  .Choose_Us_Section .row {
-    z-index: 3;
-    position: relative;
-  }
-  /* ----------------------------------------------How it Works------------------------------------------------------ */
-  .Start_Card{
-    padding: 20px;
-    box-shadow:0px 5px 10px 0px rgba(0, 0, 0, 0.15) ;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
- 
 }
 
+.ProjecrCard {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+/* ------------------------------------------Service--------------------------------------------------- */
+.Learn_More {
+  text-decoration: none;
+  color: #d72024;
+}
+.service_card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 15px solid white;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* -----------------------------------------------Bus Choose------------------------------------------------- */
+.Bus_Choose_card {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+}
+/* -----------------------------------------------------Choose Us------------------------------------------------ */
+
+.Choose_Us_Section {
+  background-image: url("assets/choose_us.jpg"); /* Replace with your background image path */
+  background-attachment: fixed; /* Makes the background fixed */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 80px 50px; /* Adds spacing above and below the content */
+  position: relative;
+}
+.Choose_Us_Section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #ff512f;
+  background: -webkit-linear-gradient(to left, #dd2476, #ff512f);
+  background: linear-gradient(to left, #dd2476, #ff512f);
+  opacity: 0.8;
+}
+.Choose_Us_Section .row {
+  z-index: 3;
+  position: relative;
+}
+/* ----------------------------------------------How it Works------------------------------------------------------ */
+.Start_Card {
+  padding: 20px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .Start_Card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-  .First_Start_Card{
-    background: #FF512F; 
-    background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
-    background: linear-gradient(to left, #DD2476, #FF512F); 
-  }
+.First_Start_Card {
+  background: #ff512f;
+  background: -webkit-linear-gradient(to left, #dd2476, #ff512f);
+  background: linear-gradient(to left, #dd2476, #ff512f);
+}
 
-  /* -------------------------------------------------Testimonials-------------------------------------------------------- */
-  .testimonials-section {
-    background-image: url("assets/Project_bg.png");
-    background-size: cover;
-  }
-  .testimonials-section .left-image {
-    position: relative;
-  }
-  .testimonials-section .left-image img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  .testimonials-section .left-image .quote-icon {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #ffc107;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 24px;
-    color: #fff;
-  }
-  .testimonials-section .testimonial-card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .testimonials-section .testimonial-card .profile img {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-  }
-  .testimonials-section .testimonial-card .profile-info {
-    margin-left: 15px;
-  }
-  
+/* -------------------------------------------------Testimonials-------------------------------------------------------- */
+.testimonials-section {
+  background-image: url("assets/Project_bg.png");
+  background-size: cover;
+}
+.testimonials-section .left-image {
+  position: relative;
+}
+.testimonials-section .left-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.testimonials-section .left-image .quote-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffc107;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+}
+.testimonials-section .testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.testimonials-section .testimonial-card .profile img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.testimonials-section .testimonial-card .profile-info {
+  margin-left: 15px;
+}
+
 .splide__slide {
   position: relative;
-
 }
 .splide__arrow--prev {
   left: 0em;
@@ -402,10 +393,9 @@ header {
 .splide__arrow--next {
   right: 0em;
 }
-.Have_Ques{
-  background-image: url('assets/Project_bg.png');
+.Have_Ques {
+  background-image: url("assets/Project_bg.png");
   background-size: cover;
-
 }
 /* ------------------------------------------------------FAQ---------------------------------------------------- */
 .accordion-header .accordion-button {
@@ -434,17 +424,17 @@ header {
 
 /* ------------------------------------Footer-------------------------------------------- */
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
-.Footer_link li a{
+.Footer_link li a {
   text-decoration: none;
   color: #b2acac;
 }
 /* -----------------------------------About Page--------------------------------------------- */
 .hero-section_about {
   position: relative;
-  background: url('assets/about_hero.jpg') center/cover no-repeat;
+  background: url("assets/about_hero.jpg") center/cover no-repeat;
   width: 100%;
   height: 80vh;
   display: flex;
@@ -463,16 +453,15 @@ header {
   }
 }
 
-
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #FF512F; 
-  background: -webkit-linear-gradient(to left, #DD2476, #FF512F); 
-  background: linear-gradient(to left, #DD2476, #FF512F); 
+  background: #ff512f;
+  background: -webkit-linear-gradient(to left, #dd2476, #ff512f);
+  background: linear-gradient(to left, #dd2476, #ff512f);
   opacity: 0.8;
   z-index: 1;
 }
@@ -484,22 +473,21 @@ header {
 
 /* ---------------------------------contact----------------------------------------------- */
 
-.contact_icon{
-  transition: .5s;
+.contact_icon {
+  transition: 0.5s;
 }
-.contact_icon:hover{
+.contact_icon:hover {
   transform: translateY(-10px);
 }
-.form_btn{
+.form_btn {
   padding: 10px 20px;
-  background-color: #D72024;
+  background-color: #d72024;
   border: none;
   color: #fff;
-font-weight: 700;
-
+  font-weight: 700;
 }
-.form-control{
-  background-color: #F4F4F4;
+.form-control {
+  background-color: #f4f4f4;
 }
 
 /* Modal Styles */
@@ -560,12 +548,14 @@ input[type="radio"] {
   display: block;
 }
 
-#loginForm, #signupForm {
+#loginForm,
+#signupForm {
   display: none;
   flex-direction: column;
 }
 
-.modal_input, .modalbtn{
+.modal_input,
+.modalbtn {
   width: 90%;
   margin: 10px auto;
   padding: 10px;
@@ -574,29 +564,28 @@ input[type="radio"] {
 }
 
 .modalbtn {
-  background: #D72024;
-  border: 1px solid #D72024;
+  background: #d72024;
+  border: 1px solid #d72024;
   color: white;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .modalbtn:hover {
- border: 2px solid #D72024;
- background-color: white;
- color: #000;
+  border: 2px solid #d72024;
+  background-color: white;
+  color: #000;
 }
 /* -----------------------Booking page--------------------------------- */
-.btn-light{
+.btn-light {
   background-color: white;
   border: 1px solid #bfbdbd;
   border-radius: 0%;
-  padding:10px 30px;
+  padding: 10px 30px;
 }
 
-
 .btn-pink {
-  background-color: #E1007D;
+  background-color: #e1007d;
   color: #fff;
 }
 
@@ -604,7 +593,6 @@ input[type="radio"] {
   background-color: #ff4081;
   color: #fff;
 }
-
 
 .hover-box {
   display: none;
@@ -623,7 +611,7 @@ input[type="radio"] {
 
 .hoverable {
   position: relative;
-  color: #E1007D;
+  color: #e1007d;
   cursor: pointer;
 }
 
@@ -655,7 +643,7 @@ input[type="radio"] {
 .slider-range {
   position: absolute;
   height: 100%;
-  background: #DD2476;
+  background: #dd2476;
   border-radius: 3px;
 }
 
@@ -664,7 +652,7 @@ input[type="radio"] {
   top: 50%;
   width: 20px;
   height: 20px;
-  background: #DD2476;
+  background: #dd2476;
   border-radius: 50%;
   border: 2px solid white;
   transform: translate(-50%, -50%);
@@ -680,8 +668,8 @@ input[type="radio"] {
 }
 
 /* ------------------View Seats--------------------------------- */
-.View_Seat_Cross{
-  border: 1px solid #DD2476;
+.View_Seat_Cross {
+  border: 1px solid #dd2476;
   padding: 10px;
   border-radius: 50%;
   width: 2rem;
@@ -692,14 +680,14 @@ input[type="radio"] {
   cursor: pointer;
 }
 .btn-group .btn {
-  transition: all 0.5s ease; 
+  transition: all 0.5s ease;
 }
 
 .btn-group .btn.active {
   width: 50px;
-  background-color: #DD2476;
-  color: white; 
-  border-color: #DD2476;
+  background-color: #dd2476;
+  color: white;
+  border-color: #dd2476;
 }
 
 .double_seat {
@@ -713,7 +701,7 @@ input[type="radio"] {
   font-size: 12px;
   border-radius: 5px;
 }
-.single_seat{
+.single_seat {
   width: 20px;
   height: 20px;
   margin: 3px;
@@ -724,7 +712,7 @@ input[type="radio"] {
   font-size: 12px;
   border-radius: 5px;
 }
-.seat_Container{
+.seat_Container {
   width: 20px !important;
   height: 20px !important;
   display: inline-block;
@@ -761,19 +749,19 @@ input[type="radio"] {
 }
 .radio-buttons {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .radio-buttons label {
   display: flex;
   align-items: center;
-  font-size: 16px; 
+  font-size: 16px;
   cursor: pointer;
 }
 
 .radio-buttons input[type="radio"] {
   display: block;
-  margin-right: 8px; 
+  margin-right: 8px;
   background-color: #28a745;
 }
 
@@ -793,7 +781,7 @@ input[type="radio"] {
 
 #All_Details.show {
   top: 0%;
-  right: 0; 
+  right: 0;
 }
 
 .hidden {
@@ -802,45 +790,61 @@ input[type="radio"] {
 
 /* --------User Profile Container------------ */
 
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  position: relative;
-}
 
-.edit-icon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ff5722;
-  border-radius: 50%;
-  color: white;
-  padding: 5px;
-  font-size: 12px;
-}
 
-.form-container {
-  max-width: 600px;
-  margin: 20px auto;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.save-btn {
+
+.sidebar {
+  background-color: #ffffff;
+  border-right: 1px solid #dee2e6;
+  min-height: auto;
+}
+.sidebar a {
+  color: #495057;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  cursor: pointer;
+}
+.sidebar a.active {
   background-color: #DC3545;
-  color: white;
+  color: #ffffff;
+}
+.btn-submit {
+  background-color: #DC3545;
+  color: #ffffff;
+}
+.btn-submit:hover {
+  background-color: #f65666;
+  color: #ffffff;
+}
+.content-section {
+  display: none;
+}
+.content-section.active {
+  display: block;
 }
 
-.save-btn:hover {
-  background-color: #DC3545;
-  color: white;
-}
+   .nav-tabs .nav-link {
+      border: none;
+      color: #777;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: #e74c3c;
+      border-bottom: 2px solid #e74c3c;
+      font-weight: bold;
+    }
+
+    .tab-content {
+      margin-top: 20px;
+    }
+
+    .alert-box {
+      background-color: #fff6f6;
+      color: #e74c3c;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid #fce4e4;
+    }
